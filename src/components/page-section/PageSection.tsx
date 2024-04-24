@@ -24,7 +24,7 @@ const PageSection = (section: PageSectionData) => {
       <div
         className='page-section-header'
         onClick={() => togglePageSection()}>
-          <h2>{section.name}</h2>
+          <h2>{section.id + 1}. {section.name}</h2>
           <span className='chevron'>&#10094;</span>
       </div>
       <div className='page-section-body'>

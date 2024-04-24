@@ -27,6 +27,7 @@ export interface CelestialObject {
 
 export interface Star {
   name: string;
+  description: string[];
   radius: number;
   mass: number;
   density: number;
@@ -45,6 +46,7 @@ export interface Star {
 
 export interface Planet {
   name: string;
+  description: string[];
   radius: number;
   mass: number;
   density: number;

@@ -1,7 +1,9 @@
 import { SystemPartTypes, SystemPart, Star, Planet, Region } from '../types/data';
+import * as D from './descriptions';
 
 const Sun: Star = {
   name: 'Sun',
+  description: D.Sun,
   radius: 696_300,
   mass: 332_950,
   density: 1_408,
@@ -26,6 +28,7 @@ const Sun: Star = {
 
 const Mercury: Planet = {
   name: 'Mercury',
+  description: D.Mercury,
   radius: 2_440,
   mass: .055,
   density: 5_427,
@@ -49,6 +52,7 @@ const Mercury: Planet = {
 
 const Venus: Planet = {
   name: 'Venus',
+  description: D.Venus,
   radius: 6_052,
   mass: .815,
   density: 5_243,
@@ -72,6 +76,7 @@ const Venus: Planet = {
 
 const Earth: Planet = {
   name: 'Earth',
+  description: D.Earth,
   radius: 6_371,
   mass: 1,
   density: 5_513,
@@ -95,6 +100,7 @@ const Earth: Planet = {
 
 const Mars: Planet = {
   name: 'Mars',
+  description: D.Mars,
   radius: 3_389,
   mass: 0.107,
   density: 3_934,
@@ -118,6 +124,7 @@ const Mars: Planet = {
 
 const Jupiter: Planet = {
   name: 'Jupiter',
+  description: D.Jupiter,
   radius: 69_911,
   mass: 317.8,
   density: 1_326,
@@ -141,6 +148,7 @@ const Jupiter: Planet = {
 
 const Saturn: Planet = {
   name: 'Saturn',
+  description: D.Saturn,
   radius: 58_232,
   mass: 95.2,
   density: 687,
@@ -164,6 +172,7 @@ const Saturn: Planet = {
 
 const Uranus: Planet = {
   name: 'Uranus',
+  description: D.Uranus,
   radius: 25_362,
   mass: 14.536,
   density: 1_270,
@@ -187,6 +196,7 @@ const Uranus: Planet = {
 
 const Neptune: Planet = {
   name: 'Neptune',
+  description: D.Neptune,
   radius: 24_622,
   mass: 17.147,
   density: 1_638,
