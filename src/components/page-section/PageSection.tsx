@@ -21,9 +21,12 @@ const PageSection = (section: PageSectionData) => {
 
   return (
     <div className={`page-section${collapsed ? ' collapsed' : ''}`}>
-      <h2 
+      <div
         className='page-section-header'
-        onClick={() => togglePageSection()}>{section.name}</h2>
+        onClick={() => togglePageSection()}>
+          <h2>{section.name}</h2>
+          <span className='chevron'>&#10094;</span>
+      </div>
       <div className='page-section-body'>
         {section.type == SystemPartTypes.star &&
           <CelestialObjectContainer {...celestialObject(CelestialObjectTypes.star, section.content as Star)} />

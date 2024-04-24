@@ -1,25 +1,71 @@
+@use '../../_styles/block';
+
+$section-margin: 10px;
+
 .page-section {
   display: flex;
   flex-direction: column;
-  width: min(100% - 20px, 1000px);
-  margin: 10px 0;
-  background: #222;
+  width: min(100% - 2 * $section-margin, 1200px);
+  margin: $section-margin;
+  border-radius: 10px;
+  transition: .5s;
+}
+
+.page-section.collapsed {
+  transition: .3s;
+  @include block.shadow;
 }
 
 .page-section-header {
-  padding: 10px;
-  background: #333;
-  font-size: 20px;
+  position: relative;
+  display: flex;
+  padding: 15px 20px;
   cursor: pointer;
 }
 
+.page-section-header::after {
+  content: '';
+  position: absolute;
+  left: -15px;
+  bottom: 8px;
+  width: calc(100% + 30px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, block.$color 50px, block.$color calc(100% - 50px), transparent 100%);
+  transition: .3s;
+}
+
+.page-section.collapsed .page-section-header::after {
+  left: 50%;
+  width: 0;
+}
+
+.page-section-header h2 {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: .04em;
+}
+
+.chevron {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  font-size: 26px;
+  font-weight: 400;
+  transition: .2s;
+  transform: rotateZ(90deg);
+}
+
+.page-section.collapsed .chevron {
+  transform: rotateZ(270deg);
+}
+
 .page-section-body {
-  flex-grow: 1;
-  background: #282828;
+  animation: fadeIn .4s;
 }
 
 .page-section.collapsed .page-section-body {
   display: none;
 }
-
-

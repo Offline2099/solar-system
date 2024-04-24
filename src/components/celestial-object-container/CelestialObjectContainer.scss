@@ -1,5 +1,15 @@
+@use './../../_styles/block';
+
 .celestial-object-container {
   margin: 5px;
   padding: 5px;
-  border: 1px solid #333;
+  @include block.shadow;
+}
+
+.celestial-object-container:only-child {
+  box-shadow: none;
+}
+
+.celestial-object-container:only-child .celestial-object-container-header {
+  display: none;
 }

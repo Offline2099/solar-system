@@ -1,0 +1,17 @@
+$color: hsla(200, 60%, 65%, .6);
+
+$dot-bg: #000;
+$dot-color: $color;
+$dot-size: 1px;
+$dot-space: 22px;
+
+@mixin dots {
+  background:
+		linear-gradient(90deg, $dot-bg calc($dot-space - $dot-size), transparent 1%) center / $dot-space $dot-space,
+		linear-gradient($dot-bg calc($dot-space - $dot-size), transparent 1%) center / $dot-space $dot-space,
+		$dot-color;
+}
+
+@mixin shadow {
+  box-shadow: 0 0 4px 0 $color inset;
+}

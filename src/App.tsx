@@ -14,7 +14,9 @@ function App() {
   return (
     <div className="App">
 
-      <header>Solar System</header>
+      <header>
+        <h1>Solar System</h1>
+      </header>
 
       <div className='content-area'>
         {sections.map(section => 
