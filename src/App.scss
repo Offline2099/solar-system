@@ -27,6 +27,7 @@ header h1 {
   min-height: calc(100vh - ($header-height + $footer-height-min));
   align-items: center;
   padding: 10px;
+  background-image: url('/assets/img/decorative/stars.jpg');
   @include block.shadow;
 }
 
