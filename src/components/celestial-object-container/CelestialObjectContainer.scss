@@ -8,7 +8,7 @@
 }
 
 .celestial-object-container:only-child {
-  margin: 10px;
+  margin: 0;
   box-shadow: none;
 }
 
@@ -61,7 +61,7 @@
 }
 
 .celestial-object-container:only-child .celestial-object-container-body{
-  padding: 10px;
+  padding: 15px;
 }
 
 .celestial-object-container.collapsed .celestial-object-container-body {

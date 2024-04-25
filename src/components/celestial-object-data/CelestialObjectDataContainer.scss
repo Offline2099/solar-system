@@ -1,39 +1,49 @@
 @use './../../_styles/block';
 
-@mixin border {
-  border-bottom: 1px dotted block.$color;
-}
-
 .data-container {
   display: flex;
+  margin-top: 15px;
+  cursor: default;
 }
 
 .data-section {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  padding: 5px
+  margin-right: 10px;
+  border-radius: 10px;
+  @include block.shadow;
+}
+
+.data-section:last-of-type {
+  margin-right: 0;
 }
 
 .data-section-header {
-  padding: 5px 0;
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0;
   font-size: 18px;
+  @include block.shadow-bottom;
 }
 
 .data-section-body {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: .015em;
 }
 
 .data-section-group {
   display: flex;
-  @include border;
+  @include block.border-dotted;
 }
 
 .data-section-group-name {
   display: flex;
   align-items: center;
   flex-basis: 30%;
+  padding: 5px;
 }
 
 .data-section-group-body {
@@ -46,7 +56,7 @@
   display: flex;
   flex-grow: 1;
   padding: 5px;
-  @include border;
+  @include block.border-dotted;
 }
 
 .data-section-group:last-of-type,
@@ -62,8 +72,14 @@
 .data-value {
   display: flex;
   flex-grow: 1;
+  justify-content: center;
 }
 
 .data-value-value {
   margin-right: 10px;
+  padding-top: 1px;
+  font-family: 'Jura', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .03em;
 }

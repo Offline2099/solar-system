@@ -19,8 +19,12 @@ $dot-space: 22px;
   box-shadow: 0 0 4px 0 $color inset;
 }
 
-@mixin border {
-	border: 1px solid $color;
+@mixin shadow-bottom {
+  box-shadow: 0 -5px 4px -4px $color-darker inset;
+}
+
+@mixin border-dotted {
+	border-bottom: 1px dotted $color;
 }
 
 @mixin line {
