@@ -1,6 +1,11 @@
-import { SystemPart, Range } from './data';
+import { SystemPart, CelestialObject, Range } from './data';
 
-export interface PageSectionData extends SystemPart {
+export interface SystemPartData extends SystemPart {
+  id: number;
+  collapsed: boolean;
+}
+
+export interface CelestialObjectData extends CelestialObject {
   id: number;
   collapsed: boolean;
 }

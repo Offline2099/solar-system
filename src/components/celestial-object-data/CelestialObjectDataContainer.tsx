@@ -1,5 +1,4 @@
-import './CelestialObjectData.scss'
-
+import './CelestialObjectDataContainer.scss'
 import { CelestialObjectTypes, CelestialObject, Planet, Star } from "../../types/data";
 import { StarDataTemplate } from "../../data/star";
 import { PlanetDataTemplate } from "../../data/planet";

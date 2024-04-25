@@ -8,30 +8,20 @@ $section-margin: 10px;
   width: min(100% - 2 * $section-margin, 1200px);
   margin: $section-margin;
   border-radius: 10px;
+  background: block.$background;
   transition: .5s;
-}
-
-.page-section.collapsed {
-  transition: .3s;
+  overflow-x: hidden;
   @include block.shadow;
 }
 
 .page-section-header {
   position: relative;
   display: flex;
-  padding: 15px 20px;
+  padding: 15px 20px 15px 30px;
   cursor: pointer;
-}
-
-.page-section-header::after {
-  content: '';
-  position: absolute;
-  left: -15px;
-  bottom: 8px;
-  width: calc(100% + 30px);
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, block.$color 50px, block.$color calc(100% - 50px), transparent 100%);
-  transition: .3s;
+  &::after {
+    @include block.line;
+  }
 }
 
 .page-section.collapsed .page-section-header::after {
@@ -45,20 +35,21 @@ $section-margin: 10px;
   letter-spacing: .04em;
 }
 
-.chevron {
+.page-section-chevron {
   display: inline-flex;
   width: 35px;
   height: 35px;
   align-items: center;
   justify-content: center;
   margin-left: auto;
+  padding-bottom: 3px;
   font-size: 26px;
   font-weight: 400;
   transition: .2s;
   transform: rotateZ(90deg);
 }
 
-.page-section.collapsed .chevron {
+.page-section.collapsed .page-section-chevron {
   transform: rotateZ(270deg);
 }
 

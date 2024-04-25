@@ -1,16 +1,70 @@
 @use './../../_styles/block';
 
 .celestial-object-container {
-  margin: 5px;
-  padding: 5px;
-  // @include block.shadow;
+  margin: 15px;
+  border-radius: 10px;
+  overflow-x: hidden;
+  @include block.shadow;
 }
 
 .celestial-object-container:only-child {
+  margin: 10px;
   box-shadow: none;
 }
 
+.celestial-object-container-header {
+  position: relative;
+  display: flex;
+  padding: 15px 25px;
+  cursor: pointer;
+  &::after {
+    @include block.line;
+  }
+}
+
+.celestial-object-container.collapsed .celestial-object-container-header::after {
+  left: 50%;
+  width: 0;
+}
+
+.celestial-object-container-header h3 {
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: .03em;
+}
+
 .celestial-object-container:only-child .celestial-object-container-header {
+  display: none;
+}
+
+.celestial-object-chevron {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding-bottom: 3px;
+  font-size: 22px;
+  font-weight: 400;
+  transition: .2s;
+  transform: rotateZ(90deg);
+}
+
+.celestial-object-container.collapsed .celestial-object-chevron {
+  transform: rotateZ(270deg);
+}
+
+.celestial-object-container-body {
+  padding: 15px;
+  animation: fadeIn .4s;
+}
+
+.celestial-object-container:only-child .celestial-object-container-body{
+  padding: 10px;
+}
+
+.celestial-object-container.collapsed .celestial-object-container-body {
   display: none;
 }
 
@@ -19,7 +73,7 @@
 }
 
 .celestial-object-description {
-  padding: 5px;
+  padding: 0 15px 0 5px;
 }
 
 .celestial-object-description p {
@@ -29,8 +83,19 @@
   line-height: 1.5em;
 }
 
+.celestial-object-description p:first-of-type {
+  margin-top: 0;
+}
+
 .celestial-object-image {
+  padding: 5px;
+  border-radius: 10px;
+  @include block.shadow;
+}
+
+.celestial-object-image img {
+  display: block;
   width: 450px;
   height: 450px;
-  // border: 1px solid block.$color;
+  border-radius: 10px;
 }

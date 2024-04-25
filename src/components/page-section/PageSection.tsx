@@ -1,13 +1,10 @@
 import './PageSection.scss';
-
 import { useState } from "react";
-
 import { SystemPartTypes, CelestialObjectTypes, CelestialObject, Star, Planet } from '../../types/data';
-import { PageSectionData } from "../../types/ui";
-
+import { SystemPartData, CelestialObjectData } from "../../types/ui";
 import CelestialObjectContainer from '../celestial-object-container/CelestialObjectContainer';
 
-const PageSection = (section: PageSectionData) => {
+const PageSection = (section: SystemPartData) => {
 
   let [collapsed, setCollapsed] = useState<boolean>(section.collapsed);
 
@@ -15,8 +12,8 @@ const PageSection = (section: PageSectionData) => {
     setCollapsed(!collapsed);
   }
 
-  const celestialObject = (type: `${CelestialObjectTypes}`, item: Star | Planet ): CelestialObject => {
-    return {type: type, body: item}
+  const wrapData = (id: number, collapsed: boolean, obj: CelestialObject): CelestialObjectData => {
+    return {id: id, collapsed: collapsed, type: obj.type, body: obj.body}
   }
 
   return (
@@ -24,15 +21,19 @@ const PageSection = (section: PageSectionData) => {
       <div
         className='page-section-header'
         onClick={() => togglePageSection()}>
-          <h2>{section.id + 1}. {section.name}</h2>
-          <span className='chevron'>&#10094;</span>
+          <h2>{section.id}. {section.name}</h2>
+          <span className='page-section-chevron'>&#10094;</span>
       </div>
       <div className='page-section-body'>
         {section.type == SystemPartTypes.star &&
-          <CelestialObjectContainer {...celestialObject(CelestialObjectTypes.star, section.content as Star)} />
+          <CelestialObjectContainer 
+            {...wrapData(1, false, {type: CelestialObjectTypes.star, body: section.content as Star})} />
         }
-        {section.type == SystemPartTypes.planets && Array.isArray(section.content) && section.content.map((item, index) => 
-          <CelestialObjectContainer key={index} {...celestialObject(CelestialObjectTypes.planet, item as Planet)} />
+        {section.type == SystemPartTypes.planets && Array.isArray(section.content) && 
+          section.content.map((item, index) => 
+            <CelestialObjectContainer 
+              key={index} 
+              {...wrapData(index + 1, true, {type: CelestialObjectTypes.planet, body: item as Planet})} />
         )}
       </div>
     </div>
