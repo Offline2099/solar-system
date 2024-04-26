@@ -1,7 +1,7 @@
 import { Star } from '../types/data';
 import { CelestialObjectDataSection } from '../types/ui';
 
-export const StarDataTemplate = (star: Star): CelestialObjectDataSection[] => {
+export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] => {
   return [
     {
       name: 'Physical Characteristics',

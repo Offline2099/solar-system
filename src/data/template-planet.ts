@@ -1,7 +1,7 @@
 import { Planet } from '../types/data';
 import { CelestialObjectDataSection } from '../types/ui';
 
-export const PlanetDataTemplate = (planet: Planet): CelestialObjectDataSection[] => {
+export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSection[] => {
   return [
     {
       name: 'Physical Characteristics',

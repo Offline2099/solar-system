@@ -1,14 +1,14 @@
 import './CelestialObjectDataContainer.scss'
 import { CelestialObjectTypes, CelestialObject, Planet, Star } from "../../types/data";
-import { StarDataTemplate } from "../../data/star";
-import { PlanetDataTemplate } from "../../data/planet";
+import { fillStarDataTemplate } from "../../data/template-star";
+import { fillPlanetDataTemplate } from "../../data/template-planet";
 import { CelestialObjectDataSection } from '../../types/ui';
 
 const CelestialObjectData = (item: CelestialObject) => {
 
   const objectData = (): CelestialObjectDataSection[] => {
-    if (item.type == CelestialObjectTypes.star) return StarDataTemplate(item.body as Star);
-    if (item.type == CelestialObjectTypes.planet) return PlanetDataTemplate(item.body as Planet);
+    if (item.type == CelestialObjectTypes.star) return fillStarDataTemplate(item.body as Star);
+    if (item.type == CelestialObjectTypes.planet) return fillPlanetDataTemplate(item.body as Planet);
     return [];
   } 
 
