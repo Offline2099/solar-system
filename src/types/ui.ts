@@ -17,8 +17,29 @@ export interface CelestialObjectDataSection {
     name: string;
     rows: {
       name: string;
-      value: number | NumberRange;
-      unit: string;
+      value: DataValue;
     }[];
   }[]
+}
+
+export interface DataValue {
+  value: {
+    n: number | NumberRange;
+    exp?: number;
+  } 
+  unit: DataValueUnit;
+}
+
+export interface DataValueUnit {
+  single: {
+    s: string;
+    sup?: boolean;
+    sub?: boolean;
+  }[];
+  plural?: {
+    s: string;
+    sup?: boolean;
+    sub?: boolean;
+  }[];
+  noSpace?: boolean;
 }

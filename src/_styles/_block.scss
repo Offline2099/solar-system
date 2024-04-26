@@ -1,7 +1,12 @@
 $color: hsla(200, 60%, 65%, .6);
 $color-darker: hsla(200, 60%, 65%, .4);
+
 $background: hsla(200, 60%, 8%, .95);
 $background-darker: hsla(200, 60%, 5%, .9);
+$background-hovered: hsl(200, 60%, 13%);
+
+$color-text: hsl(200, 60%, 65%);
+$color-numeric: hsl(180, 60%, 55%);
 
 $dot-bg: $background-darker;
 $dot-color: $color;

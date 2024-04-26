@@ -1,8 +1,9 @@
-import './CelestialObjectDataContainer.scss'
+import './CelestialObjectDataContainer.scss';
 import { CelestialObjectTypes, CelestialObject, Planet, Star } from "../../types/data";
 import { fillStarDataTemplate } from "../../data/template-star";
 import { fillPlanetDataTemplate } from "../../data/template-planet";
 import { CelestialObjectDataSection } from '../../types/ui';
+import DataValueContainer from '../data-value-container/DataValueContainer';
 
 const CelestialObjectData = (item: CelestialObject) => {
 
@@ -13,7 +14,7 @@ const CelestialObjectData = (item: CelestialObject) => {
   } 
 
   return (
-    <div className='data-container'>
+    <div className={`data-container ${item.type}`}>
       {objectData().map((section, sectionIndex) => 
         <div key={sectionIndex} className='data-section'>
           <div className='data-section-header'>{section.name}</div>
@@ -27,12 +28,7 @@ const CelestialObjectData = (item: CelestialObject) => {
                   {group.rows.map((row, rowIndex) => 
                     <div key={rowIndex} className='data-section-row'>
                       <div className='data-prop-name'>{row.name}</div>
-                      <div className='data-value'>
-                        <span className='data-value-value'>
-                          {typeof row.value === 'number' ? row.value : `${row.value.min} - ${row.value.max}`}
-                        </span>
-                        <span className='data-value-unit'>{row.unit}</span>
-                      </div>
+                      <DataValueContainer {...row.value} />
                     </div>
                   )}
                 </div>
