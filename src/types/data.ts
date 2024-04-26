@@ -1,7 +1,4 @@
-export interface Range {
-  min: number;
-  max: number;
-}
+import { NumberRange } from "./utility";
 
 export const enum SystemPartTypes {
   star = 'star',
@@ -39,8 +36,8 @@ export interface Star {
     poles: number;
   }
   galacticOrbit: {
-    radius: Range;
-    period: Range;
+    radius: NumberRange;
+    period: NumberRange;
     speed: number;
   }
 }

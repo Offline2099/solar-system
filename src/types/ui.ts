@@ -1,4 +1,5 @@
-import { SystemPart, CelestialObject, Range } from './data';
+import { NumberRange } from './utility';
+import { SystemPart, CelestialObject } from './data';
 
 export interface SystemPartData extends SystemPart {
   id: number;
@@ -16,7 +17,7 @@ export interface CelestialObjectDataSection {
     name: string;
     rows: {
       name: string;
-      value: number | Range;
+      value: number | NumberRange;
       unit: string;
     }[];
   }[]
