@@ -17,12 +17,13 @@ export interface SystemPart {
 
 export const enum CelestialObjectTypes {
   star = 'star',
-  planet = 'planet'
+  planet = 'planet',
+  region = 'region'
 }
 
 export interface CelestialObject {
   type: `${CelestialObjectTypes }`
-  body: Star | Planet;
+  body: Star | Planet | Region;
 }
 
 export interface Star {
@@ -69,5 +70,6 @@ export interface Planet {
 }
 
 export interface Region {
-
+  name: string;
+  description: string[];
 }

@@ -1,5 +1,6 @@
 import './CelestialObjectContainer.scss';
 import { useState } from 'react';
+import { CelestialObjectTypes } from '../../types/data';
 import { CelestialObjectData } from "../../types/ui";
 import CelestialObjectDataContainer from '../celestial-object-data/CelestialObjectDataContainer';
 
@@ -27,10 +28,12 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
             )}
           </div>
           <div className='celestial-object-image'>
-            <img src={`/assets/img/${item.body.name.toLowerCase()}.jpg`} />
+            <img src={`/assets/img/${item.body.name.toLowerCase().replace(/\s/g,'-')}.jpg`} />
           </div>
         </div>
-        <CelestialObjectDataContainer {...item} />
+        {(item.type == CelestialObjectTypes.star || item.type == CelestialObjectTypes.planet) &&
+          <CelestialObjectDataContainer {...item} />
+        }
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import './PageSection.scss';
 import { useState } from "react";
-import { SystemPartTypes, CelestialObjectTypes, CelestialObject, Star, Planet } from '../../types/data';
+import { SystemPartTypes, CelestialObjectTypes, CelestialObject, Star, Planet, Region } from '../../types/data';
 import { SystemPartData, CelestialObjectData } from "../../types/ui";
 import CelestialObjectContainer from '../celestial-object-container/CelestialObjectContainer';
 
@@ -35,6 +35,10 @@ const PageSection = (section: SystemPartData) => {
               key={index} 
               {...wrapData(index + 1, true, {type: CelestialObjectTypes.planet, body: item as Planet})} />
         )}
+        {section.type == SystemPartTypes.region &&
+          <CelestialObjectContainer 
+            {...wrapData(1, false, {type: CelestialObjectTypes.region, body: section.content as Region})} />
+        }
       </div>
     </div>
   );

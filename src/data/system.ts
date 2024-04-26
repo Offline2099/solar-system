@@ -122,6 +122,11 @@ const Mars: Planet = {
   }  
 }
 
+const AsteroidBelt: Region = {
+  name: 'Asteroid Belt',
+  description: D.AsteroidBelt
+}
+
 const Jupiter: Planet = {
   name: 'Jupiter',
   description: D.Jupiter,
@@ -218,6 +223,16 @@ const Neptune: Planet = {
   }  
 }
 
+const KuiperBelt: Region = {
+  name: 'Kuiper Belt',
+  description: D.KuiperBelt
+}
+
+const ScatteredDisc: Region = {
+  name: 'Scattered Disc',
+  description: D.ScatteredDisc
+}
+
 export const System: SystemPart[] = [
   {
     name: 'Sun',
@@ -232,7 +247,7 @@ export const System: SystemPart[] = [
   {
     name: 'Asteroid Belt',
     type: SystemPartTypes.region,
-    content: []
+    content: AsteroidBelt
   },
   {
     name: 'Outer Planets',
@@ -242,11 +257,11 @@ export const System: SystemPart[] = [
   {
     name: 'Kuiper belt',
     type: SystemPartTypes.region,
-    content: []
+    content: KuiperBelt
   },
   {
     name: 'Scattered Disc',
     type: SystemPartTypes.region,
-    content: []
+    content: ScatteredDisc
   }
 ];

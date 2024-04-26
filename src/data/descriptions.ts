@@ -36,6 +36,13 @@ export const Mars: string[] = [
   'Mars is visible to the naked eye and has been observed since the ancient times. The first flyby was achieved by in 1965 by the Mariner\xa04 probe. The first spacecraft to orbit the planet was the Mars\xa02 probe in 1971. The first landing was made by the Viking\xa01 probe in 1976. Since the early 21st century, Mars has been actively explored by unmanned spacecraft and rovers.'
 ];
 
+export const AsteroidBelt: string[] = [
+  'The asteroid belt is a ring-shaped region in the Solar System, centered on the Sun and spanning roughly the space between the orbits of the planets Jupiter and Mars. It consists of a large number of solid, irregularly shaped bodies called asteroids.',
+  'The asteroid belt is estimated to contain between 1.1 and 1.9 million objects larger than 1 kilometer in diameter, and millions of smaller ones. Despite their apparent abundance, asteroids are thinly distributed. On average, they are about one million kilometers apart.',
+  'About 60% of the belt\'s mass is contained in the four largest asteroids: Ceres, Vesta, Pallas, and Hygiea. Ceres is about 950 km in diameter, large enough to be considered a dwarf planet.',
+  'There are 3 main types of asteroids by composition. Carbon-rich (C-type) asteroids dominate the belt\'s outer regions and comprise over 75% of the visible asteroids. Silicate-rich (S-type) asteroids are more common toward the inner region of the belt. Metal-rich (M-type) asteroids are typically found in the middle.'
+];
+
 export const Jupiter: string[] = [
   'Jupiter is the largest planet in the Solar System. Its mass is greater than the mass of all the other planets combined.',
   'Jupiter is a gas giant. It is primarily composed of hydrogen (about 75%) and helium (about 24%), with trace amounts of other elements. Unlike terrestrial planets, it does not have a well-defined solid surface.',
@@ -68,4 +75,17 @@ export const Neptune: string[] = [
   'Neptune\'s atmosphere is known for its dynamic and turbulent weather patterns, including winds that can reach speeds of 2,000 kilometers per hour. Because of its great distance from the Sun, Neptune\'s outer atmosphere is one of the coldest places in the Solar System, with temperatures at its cloud tops approaching -218\xa0°C.',
   'Neptune has over a dozen of known moons, with the largest and most notable being Triton. The planet also has a faint system of rings composed primarily of dust particles and small rocks.',
   'Neptune is not visible to the naked eye and is the only planet in the Solar System that was found based on mathematical predictions. Neptune has only been visited by one spacecraft, Voyager\xa02, which flew by the planet in 1989 and provided the first and only close-up images of the planet and its moons.'
+];
+
+export const KuiperBelt: string[] = [
+  'The Kuiper belt is a ring-shaped region in the Solar System, centered on the Sun and extending from the orbit of Neptune at 30 AU to approximately 50 AU from the Sun. It is similar to the asteroid belt (but about 20 times larger) and consists mainly of small, irregularly shaped bodies.',
+  'The Kuiper belt is home to most of the objects that astronomers generally accept as dwarf planets: Orcus, Pluto, Haumea, Quaoar, and Makemake. Pluto was considered a planet prior to 2006, but its status was changed following the discovery of other similar bodies.',
+  'Most Kuiper belt objects are composed largely of a mixture of rock and frozen methane, ammonia, and water. The temperature of the belt is only about 50\xa0K (-223\xa0°C), so many compounds that would be gaseous closer to the Sun remain solid.',
+  'The first spacecraft to explore the Kuiper belt was New Horizons, which flew by Pluto in 2015 and by Arrokoth in 2019. The exploration continues, and new missions are planned.'
+];
+
+export const ScatteredDisc: string[] = [
+  'The scattered disc a torus-shaped region in the Solar System, centered on the Sun. It is sparsely populated by small icy bodies of irregular shape, which are among the coldest and most distant objects in the Solar System. They are composed largely of frozen water and methane.',
+  'The scattered disc objects have highly eccentric orbits that approach the Sun at about 30-35 AU and can extend well beyond 100 AU, sometimes with inclinations as high as 40°. In contrast to the Kuiper belt, the scattered disc objects can be disturbed by Neptune\'s gravity at their closest approaches to the Sun.',
+  'Because of its unstable nature, astronomers now consider the scattered disc to be the place of origin for most short-period comets, as those may have been drawn into the inner Solar System by the gravity of Neptune and other outer planets.'
 ];
