@@ -2,7 +2,7 @@ import './CelestialObjectContainer.scss';
 import { useState } from 'react';
 import { CelestialObjectTypes } from '../../types/data';
 import { CelestialObjectData } from "../../types/ui";
-import CelestialObjectDataContainer from '../celestial-object-data/CelestialObjectDataContainer';
+import CelestialObjectDataContainer from '../celestial-object-data-container/CelestialObjectDataContainer';
 
 const CelestialObjectContainer = (item: CelestialObjectData) => {
 
