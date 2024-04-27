@@ -29,6 +29,10 @@ export const km: DataValueUnit  = {
   single: [{s: 'km'}]
 }
 
+export const mi: DataValueUnit  = {
+  single: [{s: 'mi'}]
+}
+
 export const au: DataValueUnit  = {
   single: [{s: 'AU'}]
 }
@@ -43,6 +47,10 @@ export const ly: DataValueUnit  = {
 
 export const kmps: DataValueUnit  = {
   single: [{s: 'km/s'}]
+}
+
+export const mips: DataValueUnit  = {
+  single: [{s: 'mi/s'}]
 }
 
 
@@ -61,6 +69,10 @@ export const kmps2: DataValueUnit  = {
 
 export const kg: DataValueUnit  = {
   single: [{s: 'kg'}]
+}
+
+export const lb: DataValueUnit  = {
+  single: [{s: 'lb'}]
 }
 
 export const earths: DataValueUnit  = {

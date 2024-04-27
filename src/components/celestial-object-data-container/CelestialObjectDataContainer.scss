@@ -81,11 +81,12 @@
 }
 
 .data-prop-name {
+  position: relative;
   display: flex;
   flex-basis: 50%;
   padding: 0 2px 2px 2px;
   border-radius: 4px;
-  cursor: help;
+  transition: .1s;
 }
 
 .data-container.star .data-section:nth-of-type(2) .data-prop-name {
@@ -95,5 +96,18 @@
 @media (hover: hover) {
   .data-prop-name:hover {
     background: block.$background-hovered;
+    & .hint-container {
+      display: block;
+    }
   }
+}
+
+.data-value {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+
+.data-value:hover .hint-container {
+  display: block;
 }

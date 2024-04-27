@@ -22,7 +22,7 @@ const DataValueContainer = (data: DataValue) => {
             `${formatNumberStr(data.value.n.min)} - ${formatNumberStr(data.value.n.max)}`
         }
         {data.value.exp &&
-          <span>&nbsp;&sdot;&nbsp;10<sup>data.value.exp</sup></span>
+          <span>&nbsp;&sdot;&nbsp;10<sup>{data.value.exp}</sup></span>
         }
       </span>
       <span>

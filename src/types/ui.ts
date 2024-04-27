@@ -17,7 +17,9 @@ export interface CelestialObjectDataSection {
     name: string;
     rows: {
       name: string;
+      hint?: Definition[];
       value: DataValue;
+      altValues?: DataValue[];
     }[];
   }[]
 }
@@ -42,4 +44,19 @@ export interface DataValueUnit {
     sub?: boolean;
   }[];
   noSpace?: boolean;
+}
+
+export interface Definition {
+  term: string;
+  explanation: string[];
+}
+
+export const enum HintContentTypes {
+  definitions = 'definitions',
+  values = 'values'
+}
+
+export interface HintContent {
+  type: `${HintContentTypes}`;
+  content: Definition[] | DataValue[];
 }

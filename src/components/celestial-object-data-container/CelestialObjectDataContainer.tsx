@@ -2,8 +2,9 @@ import './CelestialObjectDataContainer.scss';
 import { CelestialObjectTypes, CelestialObject, Planet, Star } from "../../types/data";
 import { fillStarDataTemplate } from "../../data/template-star";
 import { fillPlanetDataTemplate } from "../../data/template-planet";
-import { CelestialObjectDataSection } from '../../types/ui';
+import { CelestialObjectDataSection, HintContentTypes } from '../../types/ui';
 import DataValueContainer from '../data-value-container/DataValueContainer';
+import HintContainer from '../hint-container/HintContainer';
 
 const CelestialObjectData = (item: CelestialObject) => {
 
@@ -11,7 +12,7 @@ const CelestialObjectData = (item: CelestialObject) => {
     if (item.type == CelestialObjectTypes.star) return fillStarDataTemplate(item.body as Star);
     if (item.type == CelestialObjectTypes.planet) return fillPlanetDataTemplate(item.body as Planet);
     return [];
-  } 
+  }
 
   return (
     <div className={`data-container ${item.type}`}>
@@ -27,8 +28,14 @@ const CelestialObjectData = (item: CelestialObject) => {
                 <div className='data-section-group-body'>
                   {group.rows.map((row, rowIndex) => 
                     <div key={rowIndex} className='data-section-row'>
-                      <div className='data-prop-name'>{row.name}</div>
-                      <DataValueContainer {...row.value} />
+                      <div className='data-prop-name'>
+                        {row.name}
+                        {row.hint && <HintContainer {...{type: HintContentTypes.definitions , content: row.hint}} />}
+                      </div>
+                      <div className='data-value'>
+                        <DataValueContainer {...row.value} />
+                        {row.altValues && <HintContainer {...{type: HintContentTypes.values , content: row.altValues}} />}
+                      </div>
                     </div>
                   )}
                 </div>
