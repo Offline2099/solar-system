@@ -18,6 +18,7 @@ html, body {
 
 body {
   background: #000;
+  min-width: 320px;
   color: shared.$color-text;
   font-family: 'Exo 2', sans-serif;
   overflow-y: scroll;

@@ -5,11 +5,16 @@
   flex-grow: 1;
   justify-content: center;
   align-items: baseline;
+  white-space: nowrap;
   &-value {
     margin-right: 10px;
     color: shared.$color-accent;
     font-size: 16px;
     letter-spacing: .03em;
+    @include shared.mobile {
+      margin-right: 7px;
+      font-size: 14px;
+    }
     &.no-space {
       margin-right: 2px;
     }

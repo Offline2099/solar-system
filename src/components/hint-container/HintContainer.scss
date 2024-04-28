@@ -1,5 +1,16 @@
 @use './../../shared';
 
+@mixin shift-right {
+  transform: none;
+  left: -20px;
+}
+
+@mixin shift-left {
+  transform: none;
+  left: unset;
+  right: -20px;
+}
+
 .hint-container {
   @include shared.border;
   display: none;
@@ -14,6 +25,14 @@
   animation: hintContainerAppear .2s .5s both;
   transform: translateX(-50%);
   box-shadow: 0 0 2px 2px shared.$background-darker;
+  @include shared.tablet {
+    .data-prop-name & {
+      @include shift-right;
+    }
+    .data-value & {
+      @include shift-left;
+    }
+  }
   &.definitions {
     width: 360px;
     padding-bottom: 15px;
@@ -61,12 +80,9 @@
 }
 
 .data-section:first-of-type .data-prop-name .hint-container {
-  transform: none;
-  left: -20px;
+  @include shift-right;
 }
 
 .data-section:last-of-type .data-value .hint-container {
-  transform: none;
-  left: unset;
-  right: -20px;
+  @include shift-left;
 }

@@ -11,15 +11,25 @@
     margin: 0;
     box-shadow: none;
   }
+  @include shared.mobile {
+    margin: 10px;
+    @include shared.chevron(26px, 18px);
+  }
   &-header {
     position: relative;
     display: flex;
     padding: 15px 25px;
+    @include shared.mobile {
+      padding: 10px 15px;
+    }
     cursor: pointer;
     & h3 {
       font-size: 22px;
       font-weight: 400;
       letter-spacing: .03em;
+      @include shared.mobile {
+        font-size: 20px;
+      }
     }
   }
   &:only-child &-header {
@@ -28,6 +38,9 @@
   &-body {
     padding: 15px;
     animation: fadeIn .4s;
+    @include shared.mobile {
+      padding: 10px;
+    }
   }
   &.collapsed &-body {
     display: none;
@@ -37,16 +50,30 @@
 .celestial-object-info {
   display: flex;
   align-items: flex-start;
+  @include shared.tablet {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
   .celestial-object-description {
     padding: 0 15px 0 5px;
+    @include shared.tablet {
+      padding: 10px 5px;
+    }
+    @include shared.mobile {
+      padding: 15px 5px 5px 5px;
+    }
     & p {
-      margin: 10px 0;
+      margin-bottom: 10px;
       font-size: 16px;
       letter-spacing: .02em;
       line-height: 1.5em;   
-      &:first-of-type {
-        margin-top: 0;
-      } 
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      @include shared.mobile {
+        font-size: 14px;
+        margin-bottom: 7px;
+      }
     }
   }
   .celestial-object-image {
@@ -55,11 +82,21 @@
     padding: 5px;
     border-radius: 10px;
     user-select: none;
+    @include shared.tablet {
+      margin: 0 auto;
+    }
+    @include shared.mobile {
+      padding: 1px;
+    }
     & img {
       display: block;
       width: 450px;
       height: 450px;
       border-radius: 10px;
+      @include shared.mobile {
+        width: 244px;
+        height: 244px;
+      }
     }
   }
 }
