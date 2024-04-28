@@ -21,7 +21,10 @@ const PageSection = (section: SystemPartData) => {
       <div
         className='page-section-header'
         onClick={() => togglePageSection()}>
-          <h2>{section.id}. {section.name}</h2>
+          <h2>
+            <span className='page-section-number'>{section.id}.</span>
+            <span>{section.name}</span>
+          </h2>
           <span className='page-section-chevron'>&#10094;</span>
       </div>
       <div className='page-section-body'>

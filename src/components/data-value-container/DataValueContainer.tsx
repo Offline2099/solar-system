@@ -16,7 +16,7 @@ const DataValueContainer = (data: DataValue) => {
 
   return (
     <div className='data-value-container'>
-      <span className={`data-value-value${data.unit.noSpace ? ' no-space' : ''}`}>
+      <span className={`data-value-container-value${data.unit.noSpace ? ' no-space' : ''}`}>
         {typeof data.value.n === 'number' ? 
           formatNumberStr(data.value.n) : 
             `${formatNumberStr(data.value.n.min)} - ${formatNumberStr(data.value.n.max)}`

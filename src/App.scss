@@ -1,40 +1,42 @@
-@use './_styles/block';
+@use './shared';
 
 $header-height: 100px;
 $footer-height-min: 100px;
 
-header {
+@mixin flex-centered {
   display: flex;
-  height: $header-height;
   align-items: center;
   justify-content: center;
-  @include block.dots;
-  @include block.shadow;
 }
 
-header h1 {
-  padding-bottom: 8px;
-  font-family: 'Jura', sans-serif;
-  font-size: 42px;
-  font-weight: 500;
-  letter-spacing: .1em;
-  user-select: none;
+header {
+  @include flex-centered;
+  @include shared.dots;
+  @include shared.shadow;
+  height: $header-height;
+  h1 {
+    padding-bottom: 8px;
+    font-family: 'Jura', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: .1em;
+    color: shared.$color-accent;
+  }
 }
 
 .content-area {
+  @include shared.shadow;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - ($header-height + $footer-height-min));
   align-items: center;
   padding: 10px;
   background-image: url('/assets/img/decorative/stars.jpg');
-  @include block.shadow;
 }
 
 footer {
-  display: flex;
+  @include flex-centered;
+  @include shared.dots;
+  @include shared.shadow;
   min-height: $footer-height-min;
-  justify-content: center;
-  @include block.dots;
-  @include block.shadow;;
 }

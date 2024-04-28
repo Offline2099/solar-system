@@ -1,30 +1,58 @@
-@use './../../_styles/block';
+@use './../../shared';
 
 .hint-container {
+  @include shared.border;
   display: none;
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: calc(100% + 5px);
-  width: 360px;
-  padding: 10px 15px 10px 15px;
-  border: 1px solid block.$color;
+  z-index: 1000;
+  padding: 10px 15px;
   border-radius: 10px;
-  background: block.$background;
-  animation: hintContainerAppear .2s .5s both;
+  background: shared.$background;
   user-select: none;
-}
-
-.hint-container.definitions {
-  width: 360px;
-  padding-bottom: 15px;
-}
-
-.hint-container.values {
-  width: 250px;
-}
-
-.hint-container:hover {
-  display: none !important;
+  animation: hintContainerAppear .2s .5s both;
+  transform: translateX(-50%);
+  box-shadow: 0 0 2px 2px shared.$background-darker;
+  &.definitions {
+    width: 360px;
+    padding-bottom: 15px;
+    & .hint-item {
+      margin-bottom: 8px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &.values {
+    width: 250px;
+    & .hint-item {
+      @include shared.border-bottom-dotted;
+      margin-bottom: 5px;
+      padding-bottom: 6px;
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+  @include shared.hover {
+    &:hover {
+      display: none !important;
+    }
+  }
+  & p {
+    margin-bottom: 5px;
+    line-height: 1.4em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    & strong {
+      color: shared.$color-accent;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+  }
 }
 
 @keyframes hintContainerAppear {
@@ -32,46 +60,13 @@
   100% {opacity: 1; bottom: calc(100% + 5px);}
 }
 
-.data-section:nth-of-type(2) .hint-container {
-  left: -50%;
+.data-section:first-of-type .data-prop-name .hint-container {
+  transform: none;
+  left: -20px;
 }
 
-.data-section:nth-of-type(3) .hint-container {
+.data-section:last-of-type .data-value .hint-container {
+  transform: none;
   left: unset;
-  right: 0;
-}
-
-.hint-container p {
-  margin-bottom: 5px;
-  line-height: 1.4em;
-}
-
-.hint-container p:last-of-type {
-  margin-bottom: 0;
-}
-
-.hint-container strong {
-  color: block.$color-accent;
-  font-weight: 600;
-  letter-spacing: .04em;
-}
-
-.hint-container.definitions .hint-item {
-  margin-bottom: 10px;
-}
-
-.hint-container.definitions .hint-item:last-of-type {
-  margin-bottom: 0;
-}
-
-.hint-container.values .hint-item {
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  border-bottom: 1px dotted block.$color;
-}
-
-.hint-container.values .hint-item:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
+  right: -20px;
 }

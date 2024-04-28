@@ -18,7 +18,7 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
         className='celestial-object-container-header'
         onClick={() => toggleBlock()}>
         <h3>{item.body.name}</h3>
-        <span className='celestial-object-chevron'>&#10094;</span>
+        <span className='celestial-object-container-chevron'>&#10094;</span>
       </div>
       <div className='celestial-object-container-body'>
         <div className='celestial-object-info'>
@@ -28,7 +28,9 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
             )}
           </div>
           <div className='celestial-object-image'>
-            <img src={`/assets/img/${item.body.name.toLowerCase().replace(/\s/g,'-')}.jpg`} />
+            <img 
+              src={`/assets/img/${item.body.name.toLowerCase().replace(/\s/g,'-')}.jpg`}
+              alt={item.body.name} />
           </div>
         </div>
         {(item.type == CelestialObjectTypes.star || item.type == CelestialObjectTypes.planet) &&

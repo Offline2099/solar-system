@@ -1,20 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@use './shared';
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&display=swap');
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: lighten(shared.$color-accent, 25);
+  background: darken(shared.$border-color-darker, 20);
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 body {
   background: #000;
-  color: hsl(200, 60%, 65%);
+  color: shared.$color-text;
   font-family: 'Exo 2', sans-serif;
   overflow-y: scroll;
-}
-
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
 }
