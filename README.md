@@ -1,46 +1,24 @@
-# Getting Started with Create React App
+# Solar System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
 
-## Available Scripts
+An overview of the Solar System with basic information about the Sun, planets, and other objects. Made in a futuristic sci-fi style.
 
-In the project directory, you can run:
+*Each region of the Solar System, as well as each celestial body, is shown as a neat collapsible block filled with relevant data.
 
-### `npm start`
+*Each data property has a hint that appears on hover and explains what it means in a brief and concise way. Values also have hints that show them converted to other measurement units, if applicable.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*The design is intended to look futuristic, inspired by various fictional UI often seen in sci-fi movies. At the same time, it is rather minimalistic and not overloaded with useless visual clutter.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+*All elements are responsive and work smoothly on tablets or mobile screens.
 
-### `npm test`
+*This project can be potentially expanded to include more detailed information about each planet, as well as moons, dwarf planets, asteroids, comets, and other parts of the Solar System.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technical Information
 
-### `npm run build`
+This project is made with React.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*To run the app in the development mode, run `npm start` in the project directory. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*To build the app for production, run `npm run build` in the project directory. The app will be saved to the `build` folder.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
