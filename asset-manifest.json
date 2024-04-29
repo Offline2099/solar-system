@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/solar-system-app/static/css/main.624dd559.css",
-    "main.js": "/solar-system-app/static/js/main.861bb122.js",
+    "main.js": "/solar-system-app/static/js/main.4f6941f3.js",
     "static/media/stars.jpg": "/solar-system-app/static/media/stars.de1e36e5e4b43e1b5118.jpg",
     "index.html": "/solar-system-app/index.html",
     "main.624dd559.css.map": "/solar-system-app/static/css/main.624dd559.css.map",
-    "main.861bb122.js.map": "/solar-system-app/static/js/main.861bb122.js.map"
+    "main.4f6941f3.js.map": "/solar-system-app/static/js/main.4f6941f3.js.map"
   },
   "entrypoints": [
     "static/css/main.624dd559.css",
-    "static/js/main.861bb122.js"
+    "static/js/main.4f6941f3.js"
   ]
 }
