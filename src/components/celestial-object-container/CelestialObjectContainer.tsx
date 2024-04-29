@@ -29,7 +29,7 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
           </div>
           <div className='celestial-object-image'>
             <img 
-              src={`/assets/img/${item.body.name.toLowerCase().replace(/\s/g,'-')}.jpg`}
+              src={`assets/img/${item.body.name.toLowerCase().replace(/\s/g,'-')}.jpg`}
               alt={item.body.name} />
           </div>
         </div>
