@@ -1,5 +1,5 @@
 import { SystemPartTypes, SystemPart, Star, Planet, Region } from '../types/data';
-import * as D from './text-descriptions';
+import * as D from './text/descriptions';
 
 const Sun: Star = {
   name: 'Sun',

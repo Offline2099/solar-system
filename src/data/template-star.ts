@@ -1,8 +1,8 @@
 import { Star } from '../types/data';
 import { CelestialObjectDataSection } from '../types/ui';
-import * as Units from './units';
-import * as Hint from './hints';
-import * as Convert from './conversion';
+import * as Hint from './text/hints';
+import * as Units from './measurement/units';
+import * as Convert from './measurement/conversion';
 
 export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] => {
   return [

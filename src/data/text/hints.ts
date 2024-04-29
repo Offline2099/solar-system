@@ -1,4 +1,4 @@
-import { Definition } from "../types/ui";
+import { Definition } from "../../types/ui";
 
 export const radius: Definition = {
   term: 'Radius',
