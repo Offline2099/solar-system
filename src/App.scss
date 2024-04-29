@@ -34,7 +34,7 @@ header {
   min-height: calc(100vh - ($header-height + $footer-height-min));
   align-items: center;
   padding: 10px;
-  background-image: url('/assets/img/decorative/stars.jpg');
+  background-image: url('../public/assets/img/decorative/stars.jpg');
 }
 
 footer {
