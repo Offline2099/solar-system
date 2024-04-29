@@ -10,7 +10,7 @@ function App() {
   ));
 
   return (
-    <div className="App">
+    <div className='App'>
       <header>
         <h1>Solar System</h1>
       </header>
@@ -19,7 +19,36 @@ function App() {
           <PageSection key={section.id} {...section} />
         )}
       </div>
-      <footer></footer>
+      <footer>
+        <div className='footer-text'>
+          <div className='footer-text-line'> 
+            <span>Made with</span>
+            <img 
+              className='footer-text-icon'
+              src='assets/img/icons/react-logo.png'
+              alt='' />
+            <span>React</span>
+          </div>
+          <div className='footer-text-line'>
+            <a href='https://github.com/Offline2099/solar-system' target='_blank'>
+              <span>View repository</span>
+              <img 
+                className='footer-text-link-icon'
+                src='assets/img/icons/external-link.png'
+                alt='' />
+            </a>
+          </div>
+          <div className='footer-text-line'>
+            <a href='https://offline2099.github.io' target='_blank'>
+              <span>View other cool stuff</span>
+              <img 
+                className='footer-text-link-icon'
+                src='assets/img/icons/external-link.png'
+                alt='' />
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

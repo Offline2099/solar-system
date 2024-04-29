@@ -41,5 +41,44 @@ footer {
   @include flex-centered;
   @include shared.dots;
   @include shared.shadow;
+  flex-wrap: wrap;
   min-height: $footer-height-min;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0 50px 0;
+  gap: 15px;
+  font-size: 16px;
+  letter-spacing: .02em;
+  &-line {
+    display: flex;
+    align-items: center;
+    & a {
+      color: inherit;
+      text-decoration: none;
+      transition: .2s;
+      @include shared.hover {
+        &:hover {
+          color: shared.$color-accent;
+        }
+      }
+    }
+  }
+  &-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 0 7px;
+    user-select: none;
+  }
+  &-link-icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 7px;
+    user-select: none;
+  }
 }
