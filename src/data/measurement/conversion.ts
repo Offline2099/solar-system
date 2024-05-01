@@ -86,3 +86,10 @@ export const d_to_h = (time: number): DataValue => {
     unit: Units.h
   }
 }
+
+export const mps2_to_g = (acceleration: number): DataValue => {
+  return {
+    value: formatValue({n: acceleration / 9.81}),
+    unit: Units.g
+  }
+}

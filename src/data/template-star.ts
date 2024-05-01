@@ -28,7 +28,8 @@ export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] =
             },
             {
               name: 'Surface Gravity', hint: [Hint.surfaceGravity],
-              value: {value: {n: star.surfaceGravity}, unit: Units.kmps2}
+              value: {value: {n: star.surfaceGravity}, unit: Units.mps2},
+              altValues: [Convert.mps2_to_g(star.surfaceGravity)]
             },
             {
               name: 'Escape Velocity', hint: [Hint.escapeVelocity],

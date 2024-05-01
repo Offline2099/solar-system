@@ -60,7 +60,7 @@ export const g: DataValueUnit  = {
   single: [{s: 'g'}]
 }
 
-export const kmps2: DataValueUnit  = {
+export const mps2: DataValueUnit  = {
   single: [{s: 'm/s'}, {s: '2', sup: true}]
 }
 

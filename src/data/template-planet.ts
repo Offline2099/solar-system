@@ -28,7 +28,8 @@ export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSecti
             },
             {
               name: 'Surface Gravity', hint: [Hint.surfaceGravity],
-              value: {value: {n: planet.surfaceGravity}, unit: Units.kmps2}
+              value: {value: {n: planet.surfaceGravity}, unit: Units.mps2},
+              altValues: [Convert.mps2_to_g(planet.surfaceGravity)]
             },
             {
               name: 'Escape Velocity', hint: [Hint.escapeVelocity],
