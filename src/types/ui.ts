@@ -25,10 +25,7 @@ export interface CelestialObjectDataSection {
 }
 
 export interface DataValue {
-  value: {
-    n: number | NumberRange;
-    exp?: number;
-  } 
+  value: number | NumberRange;
   unit: DataValueUnit;
 }
 

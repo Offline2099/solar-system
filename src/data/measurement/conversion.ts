@@ -1,95 +1,65 @@
 import { DataValue } from "../../types/ui";
 import * as Units from './units';
 
-interface Value {
-  n: number;
-  exp?: number;
-}
-
-const formatValue = (data: Value): Value  => {
-
-  let value = data.n;
-  let exp = data.exp;
-
-  const round = (val: number): number => {
-    if (val > 1000) return Math.round(val);
-    return Number(val.toPrecision(3));
-  }
-
-  if (!exp) return {n: round(value)}
-
-  while (value < 1) {
-    value *= 10;
-    exp--;
-  }
-
-  while (value > 10) {
-    value /= 10;
-    exp++;
-  }
-
-  return {n: round(value), exp: exp}
-}
-
 export const earths_to_kg =(mass: number): DataValue => {
   return {
-    value: formatValue({n: 5.972 * mass, exp: 24}),
+    value: 5.972e24 * mass,
     unit: Units.kg
   }
 }
 
 export const earths_to_lb = (mass: number): DataValue => {
   return {
-    value: formatValue({n: 1.317 * mass, exp: 25}),
+    value: 1.317e25 * mass,
     unit: Units.lb
   }
 }
 
 export const au_to_km = (distance: number): DataValue => {
   return {
-    value: formatValue({n: 1.496 * distance, exp: 8}),
+    value: 1.496e8 * distance,
     unit: Units.km
   }
 }
 
 export const au_to_mi = (distance: number): DataValue => {
   return {
-    value: formatValue({n: 9.296 * distance, exp: 7}),
+    value: 9.296e7 * distance,
     unit: Units.mi
   }
 }
 
 export const km_to_mi = (distance: number): DataValue => {
   return {
-    value: formatValue({n: distance / 1.609}),
+    value: distance / 1.609,
     unit: Units.mi
   }
 }
 
 export const kmps_to_mips = (speed: number): DataValue => {
   return {
-    value: formatValue({n: speed / 1.609}),
+    value: speed / 1.609,
     unit: Units.mips
   }
 }
 
 export const y_to_d = (time: number): DataValue => {
   return {
-    value: formatValue({n: 365.25 * time}),
+    value: 365.25 * time,
     unit: Units.d
   }
 }
 
 export const d_to_h = (time: number): DataValue => {
   return {
-    value: formatValue({n: 24 * time}),
+    value: 24 * time,
     unit: Units.h
   }
 }
 
 export const mps2_to_g = (acceleration: number): DataValue => {
   return {
-    value: formatValue({n: acceleration / 9.81}),
+    value: acceleration / 9.81,
     unit: Units.g
   }
 }

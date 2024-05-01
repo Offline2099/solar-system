@@ -14,26 +14,26 @@ export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSecti
           rows: [
             {
               name: 'Radius', hint: [Hint.radius],
-              value: {value: {n: planet.radius}, unit: Units.km},
+              value: {value: planet.radius, unit: Units.km},
               altValues: [Convert.km_to_mi(planet.radius)]
             },
             {
               name: 'Mass', hint: [Hint.mass],
-              value: {value: {n: planet.mass}, unit: Units.earths},
+              value: {value: planet.mass, unit: Units.earths},
               altValues: [Convert.earths_to_kg(planet.mass), Convert.earths_to_lb(planet.mass)]
             },
             {
               name: 'Density', hint: [Hint.density],
-              value: {value: {n: planet.density}, unit: Units.kgpm3}
+              value: {value: planet.density, unit: Units.kgpm3}
             },
             {
               name: 'Surface Gravity', hint: [Hint.surfaceGravity],
-              value: {value: {n: planet.surfaceGravity}, unit: Units.mps2},
+              value: {value: planet.surfaceGravity, unit: Units.mps2},
               altValues: [Convert.mps2_to_g(planet.surfaceGravity)]
             },
             {
               name: 'Escape Velocity', hint: [Hint.escapeVelocity],
-              value: {value: {n: planet.escapeVelocity}, unit: Units.kmps},
+              value: {value: planet.escapeVelocity, unit: Units.kmps},
               altValues: [Convert.kmps_to_mips(planet.escapeVelocity)]
             }
           ]
@@ -48,17 +48,17 @@ export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSecti
           rows: [
             {
               name: 'Semi-major Axis', hint: [Hint.semiMajorAxis, Hint.astronomicalUnit],
-              value: {value: {n: planet.orbit.radius.avg}, unit: Units.au},
+              value: {value: planet.orbit.radius.avg, unit: Units.au},
               altValues: [Convert.au_to_km(planet.orbit.radius.avg), Convert.au_to_mi(planet.orbit.radius.avg)]
             },          
             {
               name: 'Perihelion', hint: [Hint.perihelion, Hint.astronomicalUnit],
-              value: {value: {n: planet.orbit.radius.min}, unit: Units.au},
+              value: {value: planet.orbit.radius.min, unit: Units.au},
               altValues: [Convert.au_to_km(planet.orbit.radius.min), Convert.au_to_mi(planet.orbit.radius.min)]
             },
             {
               name: 'Aphelion', hint: [Hint.aphelion, Hint.astronomicalUnit],
-              value: {value: {n: planet.orbit.radius.max}, unit: Units.au},
+              value: {value: planet.orbit.radius.max, unit: Units.au},
               altValues: [Convert.au_to_km(planet.orbit.radius.max), Convert.au_to_mi(planet.orbit.radius.max)]
             }
           ]
@@ -68,12 +68,12 @@ export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSecti
           rows: [
             {
               name: 'Period', hint: [Hint.orbitalPeriod],
-              value: {value: {n: planet.orbit.period}, unit: Units.y},
+              value: {value: planet.orbit.period, unit: Units.y},
               altValues: [Convert.y_to_d(planet.orbit.period)]
             },
             {
               name: 'Speed', hint: [Hint.orbitalSpeed],
-              value: {value: {n: planet.orbit.speed}, unit: Units.kmps},
+              value: {value: planet.orbit.speed, unit: Units.kmps},
               altValues: [Convert.kmps_to_mips(planet.orbit.speed)]
             }
           ]
@@ -88,17 +88,17 @@ export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSecti
           rows: [
             {
               name: 'Sidereal Period', hint: [Hint.siderealPeriod],
-              value: {value: {n: planet.rotation.sidereal}, unit: Units.d},
+              value: {value: planet.rotation.sidereal, unit: Units.d},
               altValues: [Convert.d_to_h(planet.rotation.sidereal)]
             },
             {
               name: 'Synodic Period', hint: [Hint.synodicPeriod],
-              value: {value: {n: planet.rotation.synodic}, unit: Units.d},
+              value: {value: planet.rotation.synodic, unit: Units.d},
               altValues: [Convert.d_to_h(planet.rotation.synodic)]
             },
             {
               name: 'Axial Tilt', hint: [Hint.axialTilt],
-              value: {value: {n: planet.rotation.tilt}, unit: Units.deg}
+              value: {value: planet.rotation.tilt, unit: Units.deg}
             }
           ]
         }

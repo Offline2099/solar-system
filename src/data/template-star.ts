@@ -14,26 +14,26 @@ export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] =
           rows: [
             {
               name: 'Radius', hint: [Hint.radius], 
-              value: {value: {n: star.radius}, unit: Units.km},
+              value: {value: star.radius, unit: Units.km},
               altValues: [Convert.km_to_mi(star.radius)]
             },
             {
               name: 'Mass', hint: [Hint.mass], 
-              value: {value: {n: star.mass}, unit: Units.earths}, 
+              value: {value: star.mass, unit: Units.earths}, 
               altValues: [Convert.earths_to_kg(star.mass), Convert.earths_to_lb(star.mass)]
             },
             {
               name: 'Density', hint: [Hint.density],
-              value: {value: {n: star.density}, unit: Units.kgpm3}
+              value: {value: star.density, unit: Units.kgpm3}
             },
             {
               name: 'Surface Gravity', hint: [Hint.surfaceGravity],
-              value: {value: {n: star.surfaceGravity}, unit: Units.mps2},
+              value: {value: star.surfaceGravity, unit: Units.mps2},
               altValues: [Convert.mps2_to_g(star.surfaceGravity)]
             },
             {
               name: 'Escape Velocity', hint: [Hint.escapeVelocity],
-              value: {value: {n: star.escapeVelocity}, unit: Units.kmps},
+              value: {value: star.escapeVelocity, unit: Units.kmps},
               altValues: [Convert.kmps_to_mips(star.escapeVelocity)]
             }
           ]
@@ -48,11 +48,11 @@ export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] =
           rows: [
             {
               name: 'Equator', hint: [Hint.axialRotationPeriod],
-              value: {value: {n: star.axialRotation.equator}, unit: Units.d}
+              value: {value: star.axialRotation.equator, unit: Units.d}
             },
             {
               name: 'Poles', hint: [Hint.axialRotationPeriod],
-              value: {value: {n: star.axialRotation.poles}, unit: Units.d}
+              value: {value: star.axialRotation.poles, unit: Units.d}
             }
           ]
         },
@@ -61,15 +61,15 @@ export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] =
           rows: [
             {
               name: 'Radius', hint: [Hint.galacticOrbitRadius, Hint.lightYear],
-              value: {value: {n: star.galacticOrbit.radius}, unit: Units.ly}
+              value: {value: star.galacticOrbit.radius, unit: Units.ly}
             },
             {
               name: 'Period', hint: [Hint.galacticOrbitPeriod],
-              value: {value: {n: star.galacticOrbit.period}, unit: Units.my}
+              value: {value: star.galacticOrbit.period, unit: Units.my}
             },
             {
               name: 'Speed', hint: [Hint.galacticOrbitSpeed],
-              value: {value: {n: star.galacticOrbit.speed}, unit: Units.kmps},
+              value: {value: star.galacticOrbit.speed, unit: Units.kmps},
               altValues: [Convert.kmps_to_mips(star.galacticOrbit.speed)]
             }
           ]
