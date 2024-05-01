@@ -103,22 +103,10 @@
   padding: 0 5px 2px 5px;
   border-radius: 4px;
   transition: .1s;
-  @include shared.hover {
-    &:hover {
-      background: shared.$background-hovered;
-      & .hint-container {
-        display: block;
-      }
-    }
-  }
-  @include shared.mobile {
-    @include shared.hover {
-      &:hover {
-        background: initial;
-        & .hint-container {
-          display: none;
-        }
-      }
+  &:hover {
+    background: shared.$background-hovered;
+    & .hint-container {
+      display: block;
     }
   }
 }

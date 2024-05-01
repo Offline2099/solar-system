@@ -42,6 +42,9 @@
         margin-bottom: 0;
       }
     }
+    @include shared.mobile {
+      width: min(280px, 100vw - 60px);
+    }
   }
   &.values {
     width: 250px;
