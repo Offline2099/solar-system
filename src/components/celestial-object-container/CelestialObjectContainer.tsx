@@ -2,7 +2,9 @@ import './CelestialObjectContainer.scss';
 import { useState } from 'react';
 import { CelestialObjectTypes } from '../../types/data';
 import { CelestialObjectData } from "../../types/ui";
+import { nameToURL } from '../../services/utility';
 import CelestialObjectDataContainer from '../celestial-object-data-container/CelestialObjectDataContainer';
+
 
 const CelestialObjectContainer = (item: CelestialObjectData) => {
 
@@ -29,7 +31,7 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
           </div>
           <div className='celestial-object-image'>
             <img 
-              src={`assets/img/${item.body.name.toLowerCase().replace(/\s/g,'-')}.jpg`}
+              src={`assets/img/${nameToURL(item.body.name)}.jpg`}
               alt={item.body.name} />
           </div>
         </div>
