@@ -2,7 +2,6 @@ import './DataValueContainer.scss';
 import { DataValue } from '../../types/ui';
 import { NumberRange, ValueParts } from '../../types/utility';
 import { formatNumericValue } from '../../services/utility';
-import { Fragment } from 'react/jsx-runtime';
 
 const DataValueContainer = (data: DataValue) => {
 
@@ -41,17 +40,20 @@ const DataValueContainer = (data: DataValue) => {
     }
     if (vMax.includes('e')) {
       maxHasExp = true;
-      minWithExp = getValueParts(vMax);
+      maxWithExp = getValueParts(vMax);
     }
   }
 
   return (
     <div className='data-value-container'>
       <span className={`data-value-container-value${data.unit.noSpace ? ' no-space' : ''}`}>
-        {!range && (hasExp ? <Fragment>{vWithExp.n}<sup>{vWithExp.e}</sup></Fragment> : v)}
-        {range &&
-          `${(minHasExp ? <Fragment>{minWithExp.n}<sup>{minWithExp.e}</sup></Fragment> : vMin)} - 
-            ${(maxHasExp ? <Fragment>{maxWithExp.n}<sup>{maxWithExp.e}</sup></Fragment> : vMax)}`
+        {!range && (hasExp ? <>{vWithExp.n}<sup>{vWithExp.e}</sup></> : v)}
+        {range && 
+          <>
+          {(minHasExp ? <>{minWithExp.n}<sup>{minWithExp.e}</sup></> : vMin)}
+          {` - `}
+          {(maxHasExp ? <>{maxWithExp.n}<sup>{maxWithExp.e}</sup></> : vMax)}
+          </>
         }
       </span>
       <span>

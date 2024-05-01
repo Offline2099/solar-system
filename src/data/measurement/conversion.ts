@@ -1,4 +1,5 @@
 import { DataValue } from "../../types/ui";
+import { NumberRange } from "../../types/utility";
 import * as Units from './units';
 
 export const earths_to_kg =(mass: number): DataValue => {
@@ -61,5 +62,21 @@ export const mps2_to_g = (acceleration: number): DataValue => {
   return {
     value: acceleration / 9.81,
     unit: Units.g
+  }
+}
+
+export const range_ly_to_km = (distance: NumberRange): DataValue => {
+  const ratio: number = 9.461e12;
+  return {
+    value: {min: ratio * distance.min, max: ratio * distance.max},
+    unit: Units.km
+  }
+}
+
+export const range_ly_to_mi = (distance: NumberRange): DataValue => {
+  const ratio: number = 95.879e12;
+  return {
+    value: {min: ratio * distance.min, max: ratio * distance.max},
+    unit: Units.mi
   }
 }

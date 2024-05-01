@@ -61,7 +61,11 @@ export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] =
           rows: [
             {
               name: 'Radius', hint: [Hint.galacticOrbitRadius, Hint.lightYear],
-              value: {value: star.galacticOrbit.radius, unit: Units.ly}
+              value: {value: star.galacticOrbit.radius, unit: Units.ly},
+              altValues: [
+                Convert.range_ly_to_km(star.galacticOrbit.radius),
+                Convert.range_ly_to_mi(star.galacticOrbit.radius)
+              ]
             },
             {
               name: 'Period', hint: [Hint.galacticOrbitPeriod],
