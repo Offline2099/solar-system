@@ -30,11 +30,11 @@ const CelestialObjectData = (item: CelestialObject) => {
                     <div key={rowIndex} className='data-section-row'>
                       <div className='data-prop-name'>
                         {row.name}
-                        {row.hint && <HintContainer {...{type: HintContentTypes.definitions , content: row.hint}} />}
+                        {row.hint && <HintContainer {...{type: HintContentTypes.definitions, content: row.hint}} />}
                       </div>
                       <div className='data-value'>
                         <DataValueContainer {...row.value} />
-                        {row.altValues && <HintContainer {...{type: HintContentTypes.values , content: row.altValues}} />}
+                        {row.altValues && <HintContainer {...{type: HintContentTypes.values, content: row.altValues}} />}
                       </div>
                     </div>
                   )}
