@@ -30,7 +30,7 @@ function App() {
             <span>React</span>
           </div>
           <div className='footer-text-line'>
-            <a href='https://github.com/Offline2099/solar-system' target='_blank'>
+            <a href='https://github.com/Offline2099/solar-system' target='_blank' rel='noreferrer'>
               <span>View repository</span>
               <img 
                 className='footer-text-link-icon'
@@ -39,7 +39,7 @@ function App() {
             </a>
           </div>
           <div className='footer-text-line'>
-            <a href='https://offline2099.github.io' target='_blank'>
+            <a href='https://offline2099.github.io' target='_blank' rel='noreferrer'>
               <span>View other cool stuff</span>
               <img 
                 className='footer-text-link-icon'

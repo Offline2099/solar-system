@@ -9,8 +9,8 @@ import HintContainer from '../hint-container/HintContainer';
 const CelestialObjectData = (item: CelestialObject) => {
 
   const objectData = (): CelestialObjectDataSection[] => {
-    if (item.type == CelestialObjectTypes.star) return fillStarDataTemplate(item.body as Star);
-    if (item.type == CelestialObjectTypes.planet) return fillPlanetDataTemplate(item.body as Planet);
+    if (item.type === CelestialObjectTypes.star) return fillStarDataTemplate(item.body as Star);
+    if (item.type === CelestialObjectTypes.planet) return fillPlanetDataTemplate(item.body as Planet);
     return [];
   }
 

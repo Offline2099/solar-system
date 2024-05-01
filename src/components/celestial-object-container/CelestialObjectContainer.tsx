@@ -33,7 +33,7 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
               alt={item.body.name} />
           </div>
         </div>
-        {(item.type == CelestialObjectTypes.star || item.type == CelestialObjectTypes.planet) &&
+        {(item.type === CelestialObjectTypes.star || item.type === CelestialObjectTypes.planet) &&
           <CelestialObjectDataContainer {...item} />
         }
       </div>
