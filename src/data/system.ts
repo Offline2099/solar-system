@@ -124,7 +124,45 @@ const Mars: Planet = {
 
 const AsteroidBelt: Region = {
   name: 'Asteroid Belt',
-  description: D.AsteroidBelt
+  description: D.AsteroidBelt,
+  notableObjects: [
+    {
+      name: 'Ceres',
+      description: D.Ceres,
+      diameter: 939.4,
+      mass: 9.3839e20,
+      density: 2_162,
+      surfaceGravity: 0.284,
+      escapeVelocity: 516,
+      orbit: {
+        radius: {
+          min: 2.55,
+          max: 2.98,
+          avg: 2.77
+        },
+        period: 4.60,
+        speed: 17.9
+      }
+    },
+    {
+      name: 'Vesta',
+      description: D.Vesta,
+      diameter: 525.4,
+      mass: 2.59e20,
+      density: 3_456,
+      surfaceGravity: 0.25,
+      escapeVelocity: 360,
+      orbit: {
+        radius: {
+          min: 2.15,
+          max: 2.57,
+          avg: 2.36
+        },
+        period: 3.63,
+        speed: 19.34
+      }
+    }
+  ]
 }
 
 const Jupiter: Planet = {
@@ -225,12 +263,14 @@ const Neptune: Planet = {
 
 const KuiperBelt: Region = {
   name: 'Kuiper Belt',
-  description: D.KuiperBelt
+  description: D.KuiperBelt,
+  notableObjects: []
 }
 
 const ScatteredDisc: Region = {
   name: 'Scattered Disc',
-  description: D.ScatteredDisc
+  description: D.ScatteredDisc,
+  notableObjects: []
 }
 
 export const System: SystemPart[] = [

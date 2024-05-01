@@ -15,12 +15,13 @@ export interface SystemPart {
 export const enum CelestialObjectTypes {
   star = 'star',
   planet = 'planet',
-  region = 'region'
+  region = 'region',
+  notable = 'notable-object'
 }
 
 export interface CelestialObject {
   type: `${CelestialObjectTypes }`
-  body: Star | Planet | Region;
+  body: Star | Planet | Region | NotableObject;
 }
 
 export interface Star {
@@ -69,4 +70,24 @@ export interface Planet {
 export interface Region {
   name: string;
   description: string[];
+  notableObjects: NotableObject[];
+}
+
+export interface NotableObject {
+  name: string;
+  description: string[];
+  diameter: number;
+  mass: number;
+  density: number;
+  surfaceGravity: number;
+  escapeVelocity: number;
+  orbit: {
+    radius: {
+      min: number;
+      max:  number;
+      avg: number;
+    }
+    period: number;
+    speed: number;
+  }
 }

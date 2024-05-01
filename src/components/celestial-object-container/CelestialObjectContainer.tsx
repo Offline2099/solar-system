@@ -1,10 +1,9 @@
 import './CelestialObjectContainer.scss';
 import { useState } from 'react';
-import { CelestialObjectTypes } from '../../types/data';
+import { CelestialObjectTypes, Region, NotableObject } from '../../types/data';
 import { CelestialObjectData } from "../../types/ui";
 import { nameToURL } from '../../services/utility';
 import CelestialObjectDataContainer from '../celestial-object-data-container/CelestialObjectDataContainer';
-
 
 const CelestialObjectContainer = (item: CelestialObjectData) => {
 
@@ -12,6 +11,16 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
 
   const toggleBlock = (): void => {
     setCollapsed(!collapsed);
+  }
+
+  const secondaryContentArray = (): CelestialObjectData[] => {
+
+    if (item.type === CelestialObjectTypes.region)
+      return (item.body as Region).notableObjects.map((object, index) => (
+        {id: index + 1, collapsed: true, type: CelestialObjectTypes.notable, body: object as NotableObject}
+      ));
+
+    return [];
   }
 
   return (
@@ -29,15 +38,20 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
               <p key={i}>{p}</p>
             )}
           </div>
-          <div className='celestial-object-image'>
+          <div className={`celestial-object-image ${item.type}`}>
             <img 
               src={`assets/img/${nameToURL(item.body.name)}.jpg`}
               alt={item.body.name} />
           </div>
         </div>
-        {(item.type === CelestialObjectTypes.star || item.type === CelestialObjectTypes.planet) &&
+        {(item.type === CelestialObjectTypes.star || 
+          item.type === CelestialObjectTypes.planet || 
+          item.type === CelestialObjectTypes.notable) &&
           <CelestialObjectDataContainer {...item} />
         }
+        {secondaryContentArray().map((object, index) => 
+          <CelestialObjectContainer key={index} {...object} />
+        )}
       </div>
     </div>
   );

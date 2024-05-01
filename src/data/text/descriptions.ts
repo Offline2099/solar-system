@@ -89,3 +89,16 @@ export const ScatteredDisc: string[] = [
   'The scattered disc objects have highly eccentric orbits that approach the Sun at about 30-35 AU and can extend well beyond 100 AU, sometimes with inclinations as high as 40°. In contrast to the Kuiper belt, the scattered disc objects can be disturbed by Neptune\'s gravity at their closest approaches to the Sun.',
   'Because of its unstable nature, astronomers now consider the scattered disc to be the place of origin for most short-period comets, as those may have been drawn into the inner Solar System by the gravity of Neptune and other outer planets.'
 ];
+
+export const Ceres: string[] = [
+  'Ceres is a dwarf planet in the main asteroid belt between the orbits of Mars and Jupiter. It was previously classified as an asteroid and then as a dwarf planet, the only one within the orbit of Neptune. Ceres makes up 40% of the estimated mass of the asteroid belt.',
+  'Ceres is too small to be seen with the naked eye. It was discovered with a telescope in 1801, becoming the first known object in the asteroid belt. Little was known about Ceres until NASA\'s robotic spacecraft Dawn approached it in 2015.',
+  'Ceres lacks plate tectonics. The vast majority of its surface features appeared either due to impacts or cryovolcanic activity. Ceres has one prominent mountain, Ahuna Mons, which appears to be a cryovolcano.'
+];
+
+export const Vesta: string[] = [
+  'Vesta is the second largest object in the asteroid belt, both by mass and by volume. It constitutes an estimated 9% of the mass of the asteroid belt.',
+  'Vesta is the brightest asteroid visible from Earth. It was discovered in 1807. NASA\'s robotic spacecraft Dawn orbited Vesta between July 2011 and September 2012, fully mapping its surface.',
+  'Vesta is the only known remaining rocky protoplanet of the kind that formed the terrestrial planets. Vesta is thought to consist of a metallic iron-nickel core 214-226 km in diameter, an overlying rocky mantle, and a surface crust.',
+  'The most prominent surface features of Vesta are two enormous craters: the Rheasilvia crater, centered near the south pole, and the Veneneia crater in the southern hemisphere.'
+];

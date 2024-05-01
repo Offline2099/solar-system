@@ -45,12 +45,24 @@ export const ly: DataValueUnit  = {
 
 // Speed
 
+export const mps: DataValueUnit  = {
+  single: [{s: 'm/s'}]
+}
+
 export const kmps: DataValueUnit  = {
   single: [{s: 'km/s'}]
 }
 
+export const kmph: DataValueUnit  = {
+  single: [{s: 'km/h'}]
+}
+
 export const mips: DataValueUnit  = {
   single: [{s: 'mi/s'}]
+}
+
+export const miph: DataValueUnit  = {
+  single: [{s: 'mph'}]
 }
 
 
