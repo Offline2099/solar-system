@@ -8,6 +8,15 @@ export const radius: Definition = {
   ]
 }
 
+export const meanDiameter: Definition = {
+  term: 'Mean diameter',
+  explanation: [
+    ' of an astronomical object is the average value that represents its size.',
+    'For dwarf planets with a nearly spherical shape, it is close to the diameter of the sphere.',
+    'Asteroids can have irregular shapes, so their diameters can vary significantly depending on which axis the measurement is taken.'
+  ]
+}
+
 export const mass: Definition = {
   term: 'Mass',
   explanation: [' determines the strength of the gravitational force exerted by the body on other objects. It is also a measure of the body\'s inertia, or resistance to acceleration when a force is applied.']

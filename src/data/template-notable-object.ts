@@ -13,7 +13,7 @@ export const fillNotableObjectDataTemplate = (object: NotableObject): CelestialO
           name: '',
           rows: [
             {
-              name: 'Diameter', hint: [Hint.radius],
+              name: 'Mean Diameter', hint: [Hint.meanDiameter],
               value: {value: object.diameter, unit: Units.km},
               altValues: [Convert.km_to_mi(object.diameter)]
             },
