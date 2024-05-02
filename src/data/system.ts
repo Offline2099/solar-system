@@ -161,6 +161,42 @@ const AsteroidBelt: Region = {
         period: 3.63,
         speed: 19.34
       }
+    },
+    {
+      name: 'Pallas',
+      description: D.Pallas,
+      diameter: 512,
+      mass: 2.04e20,
+      density: 2_890,
+      surfaceGravity: 0.21,
+      escapeVelocity: 324,
+      orbit: {
+        radius: {
+          min: 2.13,
+          max: 2.77,
+          avg: 3.41
+        },
+        period: 4.611,
+        speed: 35.5
+      }
+    },
+    {
+      name: 'Hygiea',
+      description: D.Hygiea,
+      diameter: 433,
+      mass: 8.74e19,
+      density: 2_060,
+      surfaceGravity: 0.034,
+      escapeVelocity: 260,
+      orbit: {
+        radius: {
+          min: 2.7882,
+          max: 3.4948,
+          avg: 3.1415
+        },
+        period: 5.57,
+        speed: 16.76
+      }
     }
   ]
 }
@@ -336,7 +372,25 @@ const KuiperBelt: Region = {
         period: 288.83,
         speed: 4.6
       }
-    }    
+    },
+    {
+      name: 'Orcus',
+      description: D.Orcus,
+      diameter: 910,
+      mass: 6.348e20,
+      density: 1_400,
+      surfaceGravity: 0.2,
+      escapeVelocity: 430,
+      orbit: {
+        radius: {
+          min: 30.281,
+          max: 48.067,
+          avg: 39.174
+        },
+        period: 245.19,
+        speed: 4.76
+      }
+    }
   ]
 }
 
