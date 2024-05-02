@@ -91,9 +91,9 @@ export const ScatteredDisc: string[] = [
 ];
 
 export const Ceres: string[] = [
-  'Ceres is a dwarf planet in the main asteroid belt between the orbits of Mars and Jupiter. It was previously classified as an asteroid and then as a dwarf planet, the only one within the orbit of Neptune. Ceres makes up 40% of the estimated mass of the asteroid belt.',
+  'Ceres is a dwarf planet in the main asteroid belt between the orbits of Mars and Jupiter, the only one within the orbit of Neptune. It was previously classified as an asteroid. Ceres makes up 40% of the estimated mass of the asteroid belt.',
   'Ceres is too small to be seen with the naked eye. It was discovered with a telescope in 1801, becoming the first known object in the asteroid belt. Little was known about Ceres until NASA\'s robotic spacecraft Dawn approached it in 2015.',
-  'Ceres lacks plate tectonics. The vast majority of its surface features appeared either due to impacts or cryovolcanic activity. Ceres has one prominent mountain, Ahuna Mons, which appears to be a cryovolcano.'
+  'Ceres lacks plate tectonics. The vast majority of its surface features formed either due to impacts or cryovolcanic activity. Ceres has one prominent mountain, Ahuna Mons, which appears to be a cryovolcano.'
 ];
 
 export const Vesta: string[] = [
