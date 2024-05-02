@@ -79,8 +79,8 @@ export interface NotableObject {
   diameter: number;
   mass: number;
   density: number;
-  surfaceGravity: number;
-  escapeVelocity: number;
+  surfaceGravity: number | NumberRange;
+  escapeVelocity: number | NumberRange;
   orbit: {
     radius: {
       min: number;
