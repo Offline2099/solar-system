@@ -1,103 +1,84 @@
-import { DataValue } from "../../types/ui";
+import { DataValue, DataValueUnit } from "../../types/ui";
 import { NumberRange } from "../../types/utility";
 import * as Units from './units';
 
-export const earths_to_kg =(mass: number): DataValue => {
+const convertDataValue = (value: number | NumberRange, ratio: number, unit: DataValueUnit): DataValue => {
+  const isRange: boolean = typeof value !== 'number';
   return {
-    value: 5.972e24 * mass,
-    unit: Units.kg
+    value: isRange ? 
+      {min: ratio * (value as NumberRange).min, max: ratio * (value as NumberRange).max} : 
+      ratio * (value as number),
+    unit: unit
   }
 }
 
-export const earths_to_lb = (mass: number): DataValue => {
-  return {
-    value: 1.317e25 * mass,
-    unit: Units.lb
-  }
+
+// Mass
+
+export const earths_to_kg = (mass: number | NumberRange): DataValue => {
+  return convertDataValue(mass, 5.972e24, Units.kg);
 }
 
-export const kg_to_lb =(mass: number): DataValue => {
-  return {
-    value: 2.205 * mass,
-    unit: Units.lb
-  }
+export const earths_to_lb = (mass: number | NumberRange): DataValue => {
+  return convertDataValue(mass, 1.317e25, Units.lb);
 }
 
-export const au_to_km = (distance: number): DataValue => {
-  return {
-    value: 1.496e8 * distance,
-    unit: Units.km
-  }
+export const kg_to_lb =(mass: number | NumberRange): DataValue => {
+  return convertDataValue(mass, 2.205, Units.lb);
 }
 
-export const au_to_mi = (distance: number): DataValue => {
-  return {
-    value: 9.296e7 * distance,
-    unit: Units.mi
-  }
+
+// Distance
+
+export const ly_to_km = (distance: number | NumberRange): DataValue => {
+  return convertDataValue(distance, 9.461e12, Units.km);
 }
 
-export const km_to_mi = (distance: number): DataValue => {
-  return {
-    value: distance / 1.609,
-    unit: Units.mi
-  }
+export const ly_to_mi = (distance: number | NumberRange): DataValue => {
+  return convertDataValue(distance, 5.879e12, Units.mi);
 }
 
-export const kmps_to_mips = (speed: number): DataValue => {
-  return {
-    value: speed / 1.609,
-    unit: Units.mips
-  }
+export const au_to_km = (distance: number | NumberRange): DataValue => {
+  return convertDataValue(distance, 1.496e8, Units.km);
 }
 
-export const mps_to_kmph = (speed: number): DataValue => {
-  return {
-    value: 3.6 * speed,
-    unit: Units.kmph
-  }
+export const au_to_mi = (distance: number | NumberRange): DataValue => {
+  return convertDataValue(distance, 9.296e7, Units.mi);
 }
 
-export const mps_to_miph = (speed: number): DataValue => {
-  return {
-    value: 2.237 * speed,
-    unit: Units.miph
-  }
+export const km_to_mi = (distance: number | NumberRange): DataValue => {
+  return convertDataValue(distance, 0.6215, Units.mi);
 }
 
-export const y_to_d = (time: number): DataValue => {
-  return {
-    value: 365.25 * time,
-    unit: Units.d
-  }
+
+// Speed
+
+export const kmps_to_mips = (speed: number | NumberRange): DataValue => {
+  return convertDataValue(speed, 0.6215, Units.mips);
 }
 
-export const d_to_h = (time: number): DataValue => {
-  return {
-    value: 24 * time,
-    unit: Units.h
-  }
+export const mps_to_kmph = (speed: number | NumberRange): DataValue => {
+  return convertDataValue(speed, 3.6, Units.kmph);
 }
 
-export const mps2_to_g = (acceleration: number): DataValue => {
-  return {
-    value: acceleration / 9.81,
-    unit: Units.g
-  }
+export const mps_to_miph = (speed: number | NumberRange): DataValue => {
+  return convertDataValue(speed, 2.237, Units.miph);
 }
 
-export const range_ly_to_km = (distance: NumberRange): DataValue => {
-  const ratio: number = 9.461e12;
-  return {
-    value: {min: ratio * distance.min, max: ratio * distance.max},
-    unit: Units.km
-  }
+
+// Acceleration
+
+export const mps2_to_g = (acceleration: number | NumberRange): DataValue => {
+  return convertDataValue(acceleration, 0.1019, Units.g);
 }
 
-export const range_ly_to_mi = (distance: NumberRange): DataValue => {
-  const ratio: number = 95.879e12;
-  return {
-    value: {min: ratio * distance.min, max: ratio * distance.max},
-    unit: Units.mi
-  }
+
+// Time
+
+export const y_to_d = (time: number | NumberRange): DataValue => {
+  return convertDataValue(time, 365.25, Units.d);
+}
+
+export const d_to_h = (time: number | NumberRange): DataValue => {
+  return convertDataValue(time, 24, Units.h);
 }
