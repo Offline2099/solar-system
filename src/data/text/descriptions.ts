@@ -140,3 +140,11 @@ export const Quaoar: string[] = [
 export const Orcus: string[] = [
   ''
 ];
+
+export const Eris: string[] = [
+  ''
+];
+
+export const Gonggong: string[] = [
+  ''
+];
