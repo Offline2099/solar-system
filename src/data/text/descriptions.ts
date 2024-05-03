@@ -104,15 +104,19 @@ export const Vesta: string[] = [
 ];
 
 export const Pallas: string[] = [
-  ''
+  'Pallas is the third largest asteroid in the Solar System by volume and mass. It was discovered in 1802. Pallas constitutes an estimated 7% of the mass of the asteroid belt.',
+  'The orbit of Pallas has an unusually high inclination of 34.8° to the plane of the asteroid belt, making it more difficult to reach with a spacecraft. Pallas also has a very high axial tilt of 84°.',
+  'Pallas is estimated to have a composition similar to other carbon-rich asteroids in the outer regions of the asteroid belt. It may also contain a significant amount of silicate minerals, such as olivine and pyroxene, and some proportion of metals like nickel and iron.'
 ];
 
 export const Hygiea: string[] = [
-  ''
+  'Hygiea is the fourth largest asteroid in the Solar System, it constitutes an estimated 3% of the mass of the asteroid belt.',
+  'Despite its size, Hygiea appears very dim when observed from Earth due to its position in the outer main belt and relatively dark surface. Hygiea was discovered in 1849, when a number of smaller asteroids was already known.',
+  'Hygiea has a nearly spherical shape. It consists primarily of rocky materials, metals, and water ice. The average surface temperature on Hygiea is about 164\xa0K (-109\xa0°C).'
 ];
 
 export const Pluto: string[] = [
-  'Pluto is a dwarf planet in the Kuiper belt. It is the ninth largest and tenth most massive known object to directly orbit the Sun. It is also the largest known trans-Neptunian object by volume.',
+  'Pluto is a dwarf planet in the Kuiper belt. It is the ninth largest and tenth most massive known object to directly orbit the Sun. It is also the largest known trans-Neptunian object by volume. Pluto\'s eccentric orbit periodically brings it closer to the Sun than Neptune, but a stable 2:3 orbital resonance prevents them from colliding.',
   'Pluto is the first known object in the Kuiper belt, discovered in 1930. It was classified as the 9th planet until its status was changed in 2006 following the discovery of other similar objects in the Kuiper belt. In 2015, the New Horizons spacecraft made a close approach to Pluto, sending back a large amount of images and other scientific data.',
   'Pluto has five known moons: Charon (with a diameter just over half that of Pluto), Styx, Nix, Kerberos, and Hydra. Pluto and Charon are sometimes considered a binary system because the barycenter of their orbits does not lie within either body, and they are tidally locked.',
   'Pluto\'s surface is quite varied, with large differences in both brightness and color. The plains on Pluto\'s surface are composed of more than 98% nitrogen ice, with traces of methane and carbon monoxide. The mountains are made of water ice.'
@@ -138,13 +142,17 @@ export const Quaoar: string[] = [
 ];
 
 export const Orcus: string[] = [
-  ''
+  'Orcus is a dwarf planet, discovered in 2004. It has one large moon, Vanth, with a diameter of 443\xa0km, about half the size of Orcus.',
+  'Much like Pluto, Orcus is locked in a 2:3 orbital resonance with Neptune, making two revolutions around the Sun to every three of Neptune\'s. Orcus is at aphelion near the time when Pluto is at perihelion and vice versa. The perihelion of Orcus\'s orbit is around 120° from that of Pluto, while the eccentricities and inclinations are similar.',
+  'The surface of Orcus is relatively bright, reflecting about 23% of light, and neutral in color. It is rich in water ice, predominantly in crystalline form, which may be related to past cryovolcanic activity. Other compounds, like methane or ammonia, may also be present on it.'
 ];
 
 export const Eris: string[] = [
-  ''
+  'Eris is the most massive and second largest known dwarf planet in the Solar System. It was discovered in 2005 and remains the largest known object in the Solar System that has not been visited by a spacecraft. Eris has one large known moon, Dysnomia, with an estimated diameter of 615\xa0km.',
+  'The surface of Eris appears almost white and uniform. Its temperature is estimated to vary from about 30\xa0K to 56\xa0K (-243\xa0°C to -217\xa0°C). Infrared spectroscopy revealed the presence of methane ice and substantial quantities of nitrogen ice, indicating that the surface may be similar to that of Pluto, but condensation of methane spread uniformly over the surface possibly reduces any contrasts.'
 ];
 
 export const Gonggong: string[] = [
-  ''
+  'Gonggong is a dwarf planet, discovered in 2007. It has a highly eccentric and inclined orbit in a 3:10 orbital resonance with Neptune, which means it completes three orbits around the Sun for every ten orbits completed by Neptune. Gonggong has one natural satellite, Xiangliu, about 100\xa0km in diameter.',
+  'The surface of Gonggong reflects about 14% of light. Gonggong is among the reddest known trans-Neptunian objects. Spectroscopic observations revealed significant amounts of ethane ice and the presence of methane and carbon dioxide. It is also likely to contain trace amounts of other volatiles, including ammonia, carbon monoxide, and possibly nitrogen.'
 ];
