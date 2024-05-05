@@ -1,7 +1,8 @@
 import './CelestialObjectDataContainer.scss';
-import { CelestialObjectTypes, CelestialObject, Planet, Star, NotableObject } from "../../types/data";
+import { CelestialObjectTypes, CelestialObject, Planet, Moon, Star, NotableObject } from "../../types/data";
 import { fillStarDataTemplate } from "../../data/template-star";
 import { fillPlanetDataTemplate } from "../../data/template-planet";
+import { fillMoonDataTemplate } from "../../data/template-moon";
 import { fillNotableObjectDataTemplate } from '../../data/template-notable-object';
 import { CelestialObjectDataSection, HintContentTypes } from '../../types/ui';
 import DataValueContainer from '../data-value-container/DataValueContainer';
@@ -14,6 +15,8 @@ const CelestialObjectData = (item: CelestialObject) => {
       return fillStarDataTemplate(item.body as Star);
     if (item.type === CelestialObjectTypes.planet) 
       return fillPlanetDataTemplate(item.body as Planet);
+    if (item.type === CelestialObjectTypes.moon) 
+      return fillMoonDataTemplate(item.body as Moon);
     if (item.type === CelestialObjectTypes.notable) 
       return fillNotableObjectDataTemplate(item.body as NotableObject);
     return [];

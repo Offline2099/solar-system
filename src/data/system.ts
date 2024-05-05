@@ -47,7 +47,8 @@ const Mercury: Planet = {
     sidereal: 59,
     synodic: 176,
     tilt: 0.034
-  }  
+  },
+  moons: []
 }
 
 const Venus: Planet = {
@@ -71,7 +72,8 @@ const Venus: Planet = {
     sidereal: 243,
     synodic: 117,
     tilt: 177.36
-  }  
+  },
+  moons: []
 }
 
 const Earth: Planet = {
@@ -95,7 +97,27 @@ const Earth: Planet = {
     sidereal: 0.997,
     synodic: 1,
     tilt: 23.44
-  }  
+  },
+  moons: [
+    {
+      name: 'Moon',
+      description: D.Moon,
+      radius: 1_737,
+      mass: 7.342e22,
+      density: 3_344,
+      surfaceGravity: 1.622,
+      escapeVelocity: 2_380,
+      orbit: {
+        radius: {
+          min: 362_600,
+          max: 405_400,
+          avg: 384_399
+        },
+        period: 27.321,
+        speed: 1.022
+      }
+    }
+  ]
 }
 
 const Mars: Planet = {
@@ -119,7 +141,45 @@ const Mars: Planet = {
     sidereal: 1.025,
     synodic: 1.027,
     tilt: 25.19
-  }  
+  },
+  moons: [
+    {
+      name: 'Phobos',
+      description: D.Phobos,
+      radius: 11.08,
+      mass: 1.06e16,
+      density: 1_861,
+      surfaceGravity: 0.0057,
+      escapeVelocity: 11.39,
+      orbit: {
+        radius: {
+          min: 9_234,
+          max: 9_517,
+          avg: 9_376
+        },
+        period: 0.318,
+        speed: 2.138
+      }
+    },
+    {
+      name: 'Deimos',
+      description: D.Deimos,
+      radius: 6.27,
+      mass: 1.51e15,
+      density: 1_465,
+      surfaceGravity: 0.003,
+      escapeVelocity: 5.56,
+      orbit: {
+        radius: {
+          min: 23_455,
+          max: 23_471,
+          avg: 23_463
+        },
+        period: 1.263,
+        speed: 1.351
+      }
+    }
+  ]
 }
 
 const AsteroidBelt: Region = {
@@ -222,7 +282,8 @@ const Jupiter: Planet = {
     sidereal: 0.414,
     synodic: 0.414,
     tilt: 3.13
-  }  
+  },
+  moons: []
 }
 
 const Saturn: Planet = {
@@ -246,7 +307,8 @@ const Saturn: Planet = {
     sidereal: 0.440,
     synodic: 0.439,
     tilt: 26.73
-  }  
+  },
+  moons: []
 }
 
 const Uranus: Planet = {
@@ -270,7 +332,8 @@ const Uranus: Planet = {
     sidereal: 0.718,
     synodic: 0.718,
     tilt: 82.23
-  }  
+  },
+  moons: []
 }
 
 const Neptune: Planet = {
@@ -294,7 +357,8 @@ const Neptune: Planet = {
     sidereal: 0.671,
     synodic: 0.671,
     tilt: 28.32
-  }  
+  },
+  moons: []
 }
 
 const KuiperBelt: Region = {

@@ -1,6 +1,6 @@
 import './CelestialObjectContainer.scss';
 import { useState } from 'react';
-import { CelestialObjectTypes, Region, NotableObject } from '../../types/data';
+import { CelestialObjectTypes, Planet, Moon, Region, NotableObject } from '../../types/data';
 import { CelestialObjectData } from "../../types/ui";
 import { nameToURL } from '../../services/utility';
 import CelestialObjectDataContainer from '../celestial-object-data-container/CelestialObjectDataContainer';
@@ -18,6 +18,11 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
     if (item.type === CelestialObjectTypes.region)
       return (item.body as Region).notableObjects.map((object, index) => (
         {id: index + 1, collapsed: true, type: CelestialObjectTypes.notable, body: object as NotableObject}
+      ));
+
+    if (item.type === CelestialObjectTypes.planet)
+      return (item.body as Planet).moons.map((object, index) => (
+        {id: index + 1, collapsed: true, type: CelestialObjectTypes.moon, body: object as Moon}
       ));
 
     return [];
@@ -46,6 +51,7 @@ const CelestialObjectContainer = (item: CelestialObjectData) => {
         </div>
         {(item.type === CelestialObjectTypes.star || 
           item.type === CelestialObjectTypes.planet || 
+          item.type === CelestialObjectTypes.moon || 
           item.type === CelestialObjectTypes.notable) &&
           <CelestialObjectDataContainer {...item} />
         }

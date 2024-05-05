@@ -156,3 +156,22 @@ export const Gonggong: string[] = [
   'Gonggong is a dwarf planet, discovered in 2007. It has a highly eccentric and inclined orbit in a 3:10 orbital resonance with Neptune, which means it completes three orbits around the Sun for every ten orbits completed by Neptune. Gonggong has one natural satellite, Xiangliu, about 100\xa0km in diameter.',
   'The surface of Gonggong reflects about 14% of light. Gonggong is among the reddest known trans-Neptunian objects. Spectroscopic observations revealed significant amounts of ethane ice and the presence of methane and carbon dioxide. It is also likely to contain trace amounts of other volatiles, including ammonia, carbon monoxide, and possibly nitrogen.'
 ];
+
+export const Moon: string[] = [
+  'The Moon is the Earth\'s only natural satellite.',
+  'The Moon\'s mass is 1.2% of Earth\'s, and its diameter is roughly one-quarter of Earth\'s. Within the Solar System, it is the largest and most massive satellite in relation to its parent planet. It is also larger and more massive than all known dwarf planets.',
+  'The Moon is tidally locked, which means that the same side of the Moon always faces the Earth. The Moon\'s surface is covered in lunar dust and is marked by mountains, impact craters, and dark plains of cooled magma.',
+  'The first man-made object to reach the Moon was the Luna\xa02 probe in 1959. In 1969, humans landed on the Moon for the first time, which was also the first human landing on an extraterrestrial body. Five more crews visited the Moon between 1969 and 1972.' 
+];
+
+export const Phobos: string[] = [
+  'Phobos is the innermost and larger of the two natural satellites of Mars. It is a small, irregularly shaped object.',
+  'Phobos orbits closer to Mars than any other known natural satellite of a planet. It orbits Mars much faster than Mars rotates. As a result, from the surface of Mars it appears to rise in the west, move across the sky in 4 hours and 15 minutes or less, and set in the east, twice each Martian day.',
+  'Phobos is one of the least reflective bodies in the Solar System. A notable feature of Phobos is the large impact crater, Stickney, which takes up a substantial portion of its surface. Temperatures on Phobos range from about -4\xa0°C on the sunlit side to -112\xa0°C on the shadowed side.'
+];
+
+export const Deimos: string[] = [
+  'Deimos is the smaller and outer of the two natural satellites of Mars. It is highly non-spherical with the dimensions of 16.1\u00d711.8\u00d710.2\xa0km.',
+  'Deimos may be an asteroid that was perturbed by Jupiter into an orbit that allowed it to be captured by Mars, although this hypothesis is disputed. Deimos is composed of rock rich in carbonaceous material, similar to C-type asteroids and carbonaceous chondrite meteorites.',
+  'The surface of Deimos is cratered, but appears much smoother than that of Phobos. The escape velocity from Deimos is only about 5.6 m/s, a speed that could theoretically be reached by a human performing a vertical jump.'
+];

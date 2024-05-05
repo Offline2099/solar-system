@@ -42,7 +42,7 @@ export const escapeVelocity: Definition = {
 
 export const semiMajorAxis: Definition = {
   term: 'Semi-major axis',
-  explanation: [' of an elliptical orbit is the mean value of the maximum and minimum distances from the Sun.']
+  explanation: [' of an elliptical orbit is the mean value of the maximum and minimum distances from the center.']
 }
 
 export const perihelion: Definition = {
@@ -111,4 +111,14 @@ export const astronomicalUnit: Definition = {
 export const lightYear: Definition = {
   term: 'Light-year',
   explanation: [' is the distance that light travels in a vacuum in one year (365.25\xa0days).']
+}
+
+export const periapsis: Definition = {
+  term: 'Periapsis',
+  explanation: [' is the nearest point in the orbit of a moon around the planet.']
+}
+
+export const apoapsis: Definition = {
+  term: 'Apoapsis',
+  explanation: [' is the farthest point in the orbit of a moon around the planet.']
 }
