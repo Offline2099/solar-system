@@ -1,41 +1,41 @@
-@use '../../shared';
+@use '../../shared' as *;
 
 $section-margin: 10px;
 
 .page-section {
-  @include shared.shadow;
-  @include shared.header-bottom-line;
-  @include shared.chevron(35px, 26px);
+  @include shadow;
+  @include header-bottom-line;
+  @include chevron(35px, 26px);
   display: flex;
   flex-direction: column;
-  width: min(100% - 2 * $section-margin, shared.$breakpoint-tablet);
+  width: min(100% - 2 * $section-margin, $breakpoint-tablet);
   margin: $section-margin;
   border-radius: 10px;
-  background: shared.$background;
+  background: $background;
   overflow-x: hidden;
-  @include shared.mobile {
+  @include mobile {
     width: 100%;
     margin: 0 0 10px 0;
-    @include shared.chevron(30px, 22px);
+    @include chevron(30px, 22px);
   }
   &-header {
     position: relative;
     display: flex;
     padding: 15px 20px 15px 30px;
     cursor: pointer;
-    @include shared.mobile {
+    @include mobile {
       padding: 10px 15px;
     }
     & h2 {
       font-size: 26px;
       font-weight: 400;
       letter-spacing: .04em;
-      @include shared.mobile {
+      @include mobile {
         font-size: 22px;
       }
       .page-section-number {
         margin-right: .6em;
-        color: shared.$color-accent;
+        color: $color-accent;
         font-size: inherit;
         user-select: none;
       }

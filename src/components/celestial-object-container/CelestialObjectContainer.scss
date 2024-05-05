@@ -1,9 +1,9 @@
-@use './../../shared';
+@use './../../shared' as *;
 
 .celestial-object-container {
-  @include shared.shadow;
-  @include shared.header-bottom-line;
-  @include shared.chevron(30px, 22px);
+  @include shadow;
+  @include header-bottom-line;
+  @include chevron(30px, 22px);
   margin: 15px;
   border-radius: 10px;
   overflow-x: hidden;
@@ -16,21 +16,21 @@
     &:last-of-type {
       margin-bottom: 0;
     }
-    @include shared.mobile {
+    @include mobile {
       & {
         margin: 10px 0;
       }
     }
   }
-  @include shared.mobile {
+  @include mobile {
     margin: 10px;
-    @include shared.chevron(26px, 18px);
+    @include chevron(26px, 18px);
   }
   &-header {
     position: relative;
     display: flex;
     padding: 15px 25px;
-    @include shared.mobile {
+    @include mobile {
       padding: 10px 15px;
     }
     cursor: pointer;
@@ -38,7 +38,7 @@
       font-size: 22px;
       font-weight: 400;
       letter-spacing: .03em;
-      @include shared.mobile {
+      @include mobile {
         font-size: 20px;
       }
     }
@@ -49,7 +49,7 @@
   &-body {
     padding: 15px;
     animation: fadeIn .4s;
-    @include shared.mobile {
+    @include mobile {
       padding: 10px;
     }
   }
@@ -61,17 +61,17 @@
 .celestial-object-info {
   display: flex;
   align-items: flex-start;
-  @include shared.tablet {
+  @include tablet {
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
   .celestial-object-description {
     flex-grow: 1;
     padding: 0 15px 0 5px;
-    @include shared.tablet {
+    @include tablet {
       padding: 10px 5px;
     }
-    @include shared.mobile {
+    @include mobile {
       padding: 15px 5px 5px 5px;
     }
     & p {
@@ -82,22 +82,22 @@
       &:last-of-type {
         margin-bottom: 0;
       }
-      @include shared.mobile {
+      @include mobile {
         font-size: 14px;
         margin-bottom: 7px;
       }
     }
   }
   .celestial-object-image {
-    @include shared.shadow;
-    @include shared.dots;
+    @include shadow;
+    @include dots;
     padding: 5px;
     border-radius: 10px;
     user-select: none;
-    @include shared.tablet {
+    @include tablet {
       margin: 0 auto;
     }
-    @include shared.mobile {
+    @include mobile {
       padding: 1px;
     }
     & img {
@@ -105,7 +105,7 @@
       width: 450px;
       height: 450px;
       border-radius: 10px;
-      @include shared.mobile {
+      @include mobile {
         width: 244px !important;
         height: 244px !important;
       }

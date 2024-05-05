@@ -1,4 +1,4 @@
-@use './../../shared';
+@use './../../shared' as *;
 
 @mixin shift-right {
   transform: none;
@@ -12,7 +12,7 @@
 }
 
 .hint-container {
-  @include shared.border;
+  @include border;
   display: none;
   position: absolute;
   left: 50%;
@@ -20,12 +20,12 @@
   z-index: 1000;
   padding: 10px 15px;
   border-radius: 10px;
-  background: shared.$background;
+  background: $background;
   user-select: none;
   animation: hintContainerAppear .2s .5s both;
   transform: translateX(-50%);
-  box-shadow: 0 0 2px 2px shared.$background-darker;
-  @include shared.tablet {
+  box-shadow: 0 0 2px 2px $background-darker;
+  @include tablet {
     .data-prop-name & {
       @include shift-right;
     }
@@ -42,14 +42,14 @@
         margin-bottom: 0;
       }
     }
-    @include shared.mobile {
+    @include mobile {
       width: min(280px, 100vw - 60px);
     }
   }
   &.values {
     width: 250px;
     & .hint-item {
-      @include shared.border-bottom-dotted;
+      @include border-bottom-dotted;
       margin-bottom: 5px;
       padding-bottom: 6px;
       &:last-of-type {
@@ -58,10 +58,8 @@
       }
     }
   }
-  @include shared.hover {
-    &:hover {
-      display: none !important;
-    }
+  @include hover {
+    display: none !important;
   }
   & p {
     margin-bottom: 5px;
@@ -70,7 +68,7 @@
       margin-bottom: 0;
     }
     & strong {
-      color: shared.$color-accent;
+      color: $color-accent;
       font-weight: 600;
       letter-spacing: .04em;
     }

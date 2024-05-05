@@ -1,4 +1,4 @@
-@use './shared';
+@use './shared' as *;
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jura:wght@300..700&display=swap');
 
 * {
@@ -8,8 +8,8 @@
 }
 
 ::selection {
-  color: lighten(shared.$color-accent, 25);
-  background: darken(shared.$border-color-darker, 20);
+  color: lighten($color-accent, 25);
+  background: darken($border-color-darker, 20);
 }
 
 html, body {
@@ -19,7 +19,7 @@ html, body {
 body {
   background: #000;
   min-width: 320px;
-  color: shared.$color-text;
+  color: $color-text;
   font-family: 'Exo 2', sans-serif;
   overflow-y: scroll;
 }

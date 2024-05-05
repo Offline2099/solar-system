@@ -1,4 +1,4 @@
-@use './../../shared';
+@use './../../shared' as *;
 
 .data-value-container {
   display: flex;
@@ -8,10 +8,10 @@
   white-space: nowrap;
   &-value {
     margin-right: 10px;
-    color: shared.$color-accent;
+    color: $color-accent;
     font-size: 16px;
     letter-spacing: .03em;
-    @include shared.mobile {
+    @include mobile {
       margin-right: 7px;
       font-size: 14px;
     }
