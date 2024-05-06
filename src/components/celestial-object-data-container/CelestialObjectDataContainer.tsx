@@ -1,9 +1,9 @@
 import './CelestialObjectDataContainer.scss';
 import { CelestialObjectTypes, CelestialObject, Planet, Moon, Star, NotableObject } from "../../types/data";
-import { fillStarDataTemplate } from "../../data/template-star";
-import { fillPlanetDataTemplate } from "../../data/template-planet";
-import { fillMoonDataTemplate } from "../../data/template-moon";
-import { fillNotableObjectDataTemplate } from '../../data/template-notable-object';
+import { fillStarDataTemplate } from "../../data/templates/star";
+import { fillPlanetDataTemplate } from "../../data/templates/planet";
+import { fillMoonDataTemplate } from "../../data/templates/moon";
+import { fillNotableObjectDataTemplate } from '../../data/templates/notable-object';
 import { CelestialObjectDataSection, HintContentTypes } from '../../types/ui';
 import DataValueContainer from '../data-value-container/DataValueContainer';
 import HintContainer from '../hint-container/HintContainer';

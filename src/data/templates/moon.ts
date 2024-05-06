@@ -1,8 +1,8 @@
-import { Moon } from '../types/data';
-import { CelestialObjectDataSection } from '../types/ui';
-import * as Hint from './text/hints';
-import * as Units from './measurement/units';
-import * as Convert from './measurement/conversion';
+import { Moon } from '../../types/data';
+import { CelestialObjectDataSection } from '../../types/ui';
+import * as Hint from '../text/hints';
+import * as Units from '../measurement/units';
+import * as Convert from '../measurement/conversion';
 
 export const fillMoonDataTemplate = (moon: Moon): CelestialObjectDataSection[] => {
   return [

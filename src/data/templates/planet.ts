@@ -1,8 +1,8 @@
-import { Planet } from '../types/data';
-import { CelestialObjectDataSection } from '../types/ui';
-import * as Hint from './text/hints';
-import * as Units from './measurement/units';
-import * as Convert from './measurement/conversion';
+import { Planet } from '../../types/data';
+import { CelestialObjectDataSection } from '../../types/ui';
+import * as Hint from '../text/hints';
+import * as Units from '../measurement/units';
+import * as Convert from '../measurement/conversion';
 
 export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSection[] => {
   return [
@@ -20,7 +20,10 @@ export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSecti
             {
               name: 'Mass', hint: [Hint.mass],
               value: {value: planet.mass, unit: Units.earths},
-              altValues: [Convert.earths_to_kg(planet.mass), Convert.earths_to_lb(planet.mass)]
+              altValues: [
+                Convert.earths_to_kg(planet.mass),
+                Convert.earths_to_lb(planet.mass)
+              ]
             },
             {
               name: 'Density', hint: [Hint.density],
@@ -49,17 +52,26 @@ export const fillPlanetDataTemplate = (planet: Planet): CelestialObjectDataSecti
             {
               name: 'Semi-major Axis', hint: [Hint.semiMajorAxis, Hint.astronomicalUnit],
               value: {value: planet.orbit.radius.avg, unit: Units.au},
-              altValues: [Convert.au_to_km(planet.orbit.radius.avg), Convert.au_to_mi(planet.orbit.radius.avg)]
+              altValues: [
+                Convert.au_to_km(planet.orbit.radius.avg),                
+                Convert.au_to_mi(planet.orbit.radius.avg)
+              ]
             },          
             {
               name: 'Perihelion', hint: [Hint.perihelion, Hint.astronomicalUnit],
               value: {value: planet.orbit.radius.min, unit: Units.au},
-              altValues: [Convert.au_to_km(planet.orbit.radius.min), Convert.au_to_mi(planet.orbit.radius.min)]
+              altValues: [
+                Convert.au_to_km(planet.orbit.radius.min),
+                Convert.au_to_mi(planet.orbit.radius.min)
+              ]
             },
             {
               name: 'Aphelion', hint: [Hint.aphelion, Hint.astronomicalUnit],
               value: {value: planet.orbit.radius.max, unit: Units.au},
-              altValues: [Convert.au_to_km(planet.orbit.radius.max), Convert.au_to_mi(planet.orbit.radius.max)]
+              altValues: [
+                Convert.au_to_km(planet.orbit.radius.max),
+                Convert.au_to_mi(planet.orbit.radius.max)
+              ]
             }
           ]
         },

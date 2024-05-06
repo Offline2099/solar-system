@@ -1,0 +1,7 @@
+export const Sun: string[] = [
+  'The Sun is the star at the center of the Solar System, around which all the planets orbit. It is classified as a G-type main-sequence star (G2V).',
+  'The visible surface of the Sun is known as the photosphere, where the temperature is around 5,500\xa0°C. The Sun\'s core reaches a much higher temperature of about 15.7\xa0million\xa0°C.',
+  'The Sun is primarily composed of hydrogen (about 74%) and helium (about 24%), with trace amounts of heavier elements like oxygen, carbon, neon, and iron. It is a massive, hot ball of plasma, inflated and heated by energy produced by nuclear fusion reactions at its core. Every second, the Sun\'s core fuses about 600 million tons of hydrogen into helium and converts 4 million tons of matter into energy.',
+  'The Sun formed approximately 4.6 billion years ago from the gravitational collapse of matter within a region of a large molecular cloud. Its is now about halfway through its main-sequence stage, and will run out of hydrogen in the core in approximately 5 billion years.',
+  'The Sun goes through an 11-year solar cycle, during which the number of sunspots (regions of reduced temperature caused by concentrations of magnetic flux that appear darker on the Sun\'s surface) and solar flares (localized outbursts of electromagnetic radiation) varies.'
+];

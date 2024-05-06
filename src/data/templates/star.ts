@@ -1,8 +1,8 @@
-import { Star } from '../types/data';
-import { CelestialObjectDataSection } from '../types/ui';
-import * as Hint from './text/hints';
-import * as Units from './measurement/units';
-import * as Convert from './measurement/conversion';
+import { Star } from '../../types/data';
+import { CelestialObjectDataSection } from '../../types/ui';
+import * as Hint from '../text/hints';
+import * as Units from '../measurement/units';
+import * as Convert from '../measurement/conversion';
 
 export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] => {
   return [
@@ -20,7 +20,10 @@ export const fillStarDataTemplate = (star: Star): CelestialObjectDataSection[] =
             {
               name: 'Mass', hint: [Hint.mass], 
               value: {value: star.mass, unit: Units.earths}, 
-              altValues: [Convert.earths_to_kg(star.mass), Convert.earths_to_lb(star.mass)]
+              altValues: [
+                Convert.earths_to_kg(star.mass),
+                Convert.earths_to_lb(star.mass)
+              ]
             },
             {
               name: 'Density', hint: [Hint.density],
