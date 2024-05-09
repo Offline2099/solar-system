@@ -21,7 +21,7 @@ export const Mercury: Planet = {
   rotation: {
     sidereal: 59,
     synodic: 176,
-    tilt: 0.034
+    tilt: .034
   },
   moons: []
 }
@@ -40,7 +40,7 @@ export const Venus: Planet = {
       max: .7282,
       avg: .7233
     },
-    period: 0.6156,
+    period: .6156,
     speed: 35.02
   },
   rotation: {
@@ -69,7 +69,7 @@ export const Earth: Planet = {
     speed: 29.78
   },
   rotation: {
-    sidereal: 0.997,
+    sidereal: .997,
     synodic: 1,
     tilt: 23.44
   },
@@ -99,7 +99,7 @@ export const Mars: Planet = {
   name: 'Mars',
   description: D.Mars,
   radius: 3_389,
-  mass: 0.107,
+  mass: .107,
   density: 3_934,
   surfaceGravity: 3.72,
   escapeVelocity: 5.027,
@@ -124,7 +124,7 @@ export const Mars: Planet = {
       radius: 11.08,
       mass: 1.06e16,
       density: 1_861,
-      surfaceGravity: 0.0057,
+      surfaceGravity: .0057,
       escapeVelocity: 11.39,
       orbit: {
         radius: {
@@ -132,7 +132,7 @@ export const Mars: Planet = {
           max: 9_517,
           avg: 9_376
         },
-        period: 0.318,
+        period: .318,
         speed: 2.138
       }
     },
@@ -142,7 +142,7 @@ export const Mars: Planet = {
       radius: 6.27,
       mass: 1.51e15,
       density: 1_465,
-      surfaceGravity: 0.003,
+      surfaceGravity: .003,
       escapeVelocity: 5.56,
       orbit: {
         radius: {

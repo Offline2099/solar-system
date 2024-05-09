@@ -28,7 +28,7 @@ export const System: SystemPart[] = [
     content: [Jupiter, Saturn, Uranus, Neptune]
   },
   {
-    name: 'Kuiper belt',
+    name: 'Kuiper Belt',
     type: SystemPartTypes.region,
     content: KuiperBelt
   },

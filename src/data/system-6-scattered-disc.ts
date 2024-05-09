@@ -11,7 +11,7 @@ export const ScatteredDisc: Region = {
       diameter: 2_326,
       mass: 1.647e22,
       density: 2_430,
-      surfaceGravity: 0.82,
+      surfaceGravity: .82,
       escapeVelocity: 1_380,
       orbit: {
         radius: {
@@ -29,7 +29,7 @@ export const ScatteredDisc: Region = {
       diameter: 1_230,
       mass: 1.75e21,
       density: 1_740,
-      surfaceGravity: 0.31,
+      surfaceGravity: .31,
       escapeVelocity: 620,
       orbit: {
         radius: {

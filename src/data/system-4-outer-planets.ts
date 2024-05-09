@@ -19,8 +19,8 @@ export const Jupiter: Planet = {
     speed: 47.05
   },
   rotation: {
-    sidereal: 0.414,
-    synodic: 0.414,
+    sidereal: .414,
+    synodic: .414,
     tilt: 3.13
   },
   moons: [
@@ -117,8 +117,8 @@ export const Saturn: Planet = {
     speed: 34.82
   },
   rotation: {
-    sidereal: 0.440,
-    synodic: 0.439,
+    sidereal: .440,
+    synodic: .439,
     tilt: 26.73
   },
   moons: []
@@ -142,8 +142,8 @@ export const Uranus: Planet = {
     speed: 24.61
   },
   rotation: {
-    sidereal: 0.718,
-    synodic: 0.718,
+    sidereal: .718,
+    synodic: .718,
     tilt: 82.23
   },
   moons: []
@@ -167,8 +167,8 @@ export const Neptune: Planet = {
     speed: 5.43
   },
   rotation: {
-    sidereal: 0.671,
-    synodic: 0.671,
+    sidereal: .671,
+    synodic: .671,
     tilt: 28.32
   },
   moons: []

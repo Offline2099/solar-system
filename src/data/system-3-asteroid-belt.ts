@@ -11,7 +11,7 @@ export const AsteroidBelt: Region = {
       diameter: 939.4,
       mass: 9.3839e20,
       density: 2_162,
-      surfaceGravity: 0.284,
+      surfaceGravity: .284,
       escapeVelocity: 516,
       orbit: {
         radius: {
@@ -29,7 +29,7 @@ export const AsteroidBelt: Region = {
       diameter: 525.4,
       mass: 2.59e20,
       density: 3_456,
-      surfaceGravity: 0.25,
+      surfaceGravity: .25,
       escapeVelocity: 360,
       orbit: {
         radius: {
@@ -47,7 +47,7 @@ export const AsteroidBelt: Region = {
       diameter: 512,
       mass: 2.04e20,
       density: 2_890,
-      surfaceGravity: 0.21,
+      surfaceGravity: .21,
       escapeVelocity: 324,
       orbit: {
         radius: {
@@ -65,7 +65,7 @@ export const AsteroidBelt: Region = {
       diameter: 433,
       mass: 8.74e19,
       density: 2_060,
-      surfaceGravity: 0.034,
+      surfaceGravity: .034,
       escapeVelocity: 260,
       orbit: {
         radius: {

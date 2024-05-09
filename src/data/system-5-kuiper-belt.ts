@@ -11,7 +11,7 @@ export const KuiperBelt: Region = {
       diameter: 2_377,
       mass: 1.303e22,
       density: 1_854,
-      surfaceGravity: 0.620,
+      surfaceGravity: .620,
       escapeVelocity: 1_212,
       orbit: {
         radius: {
@@ -29,7 +29,7 @@ export const KuiperBelt: Region = {
       diameter: 1_560,
       mass: 4e21,
       density: 2_018,
-      surfaceGravity: {min: 0.24,  max: 0.93},
+      surfaceGravity: {min: .24,  max: .93},
       escapeVelocity: {min: 710,  max: 1000},
       orbit: {
         radius: {
@@ -47,7 +47,7 @@ export const KuiperBelt: Region = {
       diameter: 1_430,
       mass: 3.1e21,
       density: 2_000,
-      surfaceGravity: 0.57,
+      surfaceGravity: .57,
       escapeVelocity: 910,
       orbit: {
         radius: {
@@ -65,7 +65,7 @@ export const KuiperBelt: Region = {
       diameter: 1_090,
       mass: 1.2e21,
       density: 1_715,
-      surfaceGravity: {min: 0.19,  max: 0.37},
+      surfaceGravity: {min: .19,  max: .37},
       escapeVelocity: {min: 500,  max: 590},
       orbit: {
         radius: {
@@ -83,7 +83,7 @@ export const KuiperBelt: Region = {
       diameter: 910,
       mass: 6.348e20,
       density: 1_400,
-      surfaceGravity: 0.2,
+      surfaceGravity: .2,
       escapeVelocity: 430,
       orbit: {
         radius: {
