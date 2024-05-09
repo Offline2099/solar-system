@@ -23,7 +23,80 @@ export const Jupiter: Planet = {
     synodic: 0.414,
     tilt: 3.13
   },
-  moons: []
+  moons: [
+    {
+      name: 'Ganymede',
+      description: D.Ganymede,
+      radius: 2_634,
+      mass: 1.482e23,
+      density: 1_936,
+      surfaceGravity: 1.428,
+      escapeVelocity: 2_741,
+      orbit: {
+        radius: {
+          min: 1_069_200,
+          max: 1_071_600,
+          avg: 1_070_400
+        },
+        period: 7.155,
+        speed: 10.88
+      }
+    },
+    {
+      name: 'Callisto',
+      description: D.Callisto,
+      radius: 2_410,
+      mass: 1.076e23,
+      density: 1_834,
+      surfaceGravity: 1.235,
+      escapeVelocity: 2_441,
+      orbit: {
+        radius: {
+          min: 1_869_000,
+          max: 1_897_000,
+          avg: 1_882_700
+        },
+        period: 16.689,
+        speed: 8.204
+      }
+    },
+    {
+      name: 'Io',
+      description: D.Io,
+      radius: 1_822,
+      mass: 8.931e22,
+      density: 3_528,
+      surfaceGravity: 1.797,
+      escapeVelocity: 2_558,
+      orbit: {
+        radius: {
+          min: 420_000,
+          max: 423_400,
+          avg: 421_700
+        },
+        period: 1.769,
+        speed: 17.334
+      }
+    },
+    {
+      name: 'Europa',
+      description: D.Europa,
+      radius: 1_561,
+      mass: 4.8e22,
+      density: 3_013,
+      surfaceGravity: 1.314,
+      escapeVelocity: 2_025,
+      orbit: {
+        radius: {
+          min: 664_862,
+          max: 676_938,
+          avg: 670_900
+        },
+        period: 3.551,
+        speed: 13.743
+      }
+    }    
+  ]
 }
 
 export const Saturn: Planet = {
