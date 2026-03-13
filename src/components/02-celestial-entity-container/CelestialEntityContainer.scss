@@ -1,0 +1,58 @@
+@use '../../styles' as *;
+
+.entity-info {
+  display: flex;
+  align-items: flex-start;
+  @include tablet {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .entity-description {
+    flex-grow: 1;
+    padding: 0 15px 0 5px;
+    @include tablet {
+      padding: 10px 5px;
+    }
+    @include mobile {
+      padding: 15px 5px 5px 5px;
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 16px;
+      letter-spacing: .02em;
+      line-height: 1.5em;   
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      @include mobile {
+        font-size: 14px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+  .entity-image {
+    padding: 5px;
+    border-radius: 10px;
+    user-select: none;
+    @include shadow;
+    @include dots;
+    @include tablet {
+      margin: 0 auto;
+    }
+    @include mobile {
+      padding: 1px;
+    }
+    img {
+      display: block;
+      border-radius: 10px;
+      @include square(450px);
+      @include mobile {
+        @include square(244px);
+      }
+    }
+    &.notable-object img,
+    &.moon img {
+      @include square(350px);
+    }
+  }
+}

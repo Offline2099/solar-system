@@ -1,54 +1,45 @@
 import './App.scss';
-import { System } from './data/system';
-import { SystemPartData } from './types/ui';
-import PageSection from './components/page-section/PageSection';
+import { useEffect, useState } from 'react';
+import PageSection from './components/01-page-section/PageSection';
+import Footer from './components/footer/Footer';
+import { SystemPart } from './types/data/system-part.interface';
+import { dataURL, iconURL } from './services/url';
 
 function App() {
-
-  const sections: SystemPartData[] = System.map((part, i) => (
-    {...part, id: i + 1, collapsed: true}
-  ));
-
+  const [system, setSystem] = useState<SystemPart[] | null>(null);
+  const [isLoading, setLoading] = useState<boolean>(true);
+  const [isError, setError] = useState<boolean>(false);
+  const spinner: string = iconURL('spinner');
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(dataURL('system'));
+        if (!response.ok) {
+          throw new Error('Failed to load data.');
+        }
+        const jsonData: SystemPart[] = await response.json();
+        setSystem(jsonData);
+      } catch (err: any) {
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData()
+  }, []);
   return (
     <div className='App'>
       <header>
         <h1>Solar System</h1>
       </header>
-      <div className='content-area'>
-        {sections.map(section => 
-          <PageSection key={section.id} {...section} />
-        )}
-      </div>
-      <footer>
-        <div className='footer-text'>
-          <div className='footer-text-line'> 
-            <span>Made with</span>
-            <img 
-              className='footer-text-icon'
-              src='assets/img/icons/react-logo.png'
-              alt='' />
-            <span>React</span>
-          </div>
-          <div className='footer-text-line'>
-            <a href='https://github.com/Offline2099/solar-system' target='_blank' rel='noreferrer'>
-              <span>View repository</span>
-              <img 
-                className='footer-text-link-icon'
-                src='assets/img/icons/external-link.png'
-                alt='' />
-            </a>
-          </div>
-          <div className='footer-text-line'>
-            <a href='https://offline2099.github.io' target='_blank' rel='noreferrer'>
-              <span>View other cool stuff</span>
-              <img 
-                className='footer-text-link-icon'
-                src='assets/img/icons/external-link.png'
-                alt='' />
-            </a>
-          </div>
-        </div>
-      </footer>
+      <main>
+        {isLoading && <img className='spinner' src={spinner} alt='' />}
+        {isError && <>Error: unable to load data. Try to refresh the page.</>}
+        {system && 
+          system.map((part, index) => <PageSection key={index} {...{ ...part, id: index + 1 }} />)
+        }
+      </main>
+      <Footer />
     </div>
   );
 }

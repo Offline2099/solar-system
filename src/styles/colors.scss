@@ -1,0 +1,11 @@
+@use 'sass:color';
+
+$text-normal: hsl(200, 60%, 65%);
+$text-accent: hsl(180, 60%, 55%);
+
+$border-normal: color.adjust($text-normal, $alpha: -0.4);
+$border-darker: color.adjust($text-normal, $alpha: -0.6);
+
+$background: hsla(200, 60%, 8%, .95);
+$background-darker: hsla(200, 60%, 5%, .9);
+$background-hovered: hsl(200, 60%, 13%);

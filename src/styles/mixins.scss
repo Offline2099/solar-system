@@ -1,0 +1,40 @@
+@use 'colors' as *;
+
+@mixin hover {
+  @media (hover: hover) { 
+    &:hover { 
+      @content;
+    }
+  }
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin border($thickness: 1px, $color: $border-normal) {
+  border: $thickness solid $color;
+}
+
+@mixin border-bottom-dotted($color: $border-normal) {
+	border-bottom: 1px dotted $color;
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+@mixin shadow($color: $border-normal) {
+  box-shadow: 0 0 4px 0 $color inset;
+}
+
+@mixin shadow-bottom($color: $border-darker) {
+  box-shadow: 0 -5px 4px -4px $color inset;
+}
+
+@mixin dots($dot-color: $border-normal, $dot-bg: $background-darker, $dot-size: 1px, $dot-space: 22px) {
+  background:
+		linear-gradient(90deg, $dot-bg calc($dot-space - $dot-size), transparent 1%) center / $dot-space $dot-space,
+		linear-gradient($dot-bg calc($dot-space - $dot-size), transparent 1%) center / $dot-space $dot-space,
+		$dot-color;
+}

@@ -1,0 +1,95 @@
+@use '../../styles' as *;
+
+@mixin shift-right {
+  transform: none;
+  left: -20px;
+}
+
+@mixin shift-left {
+  transform: none;
+  left: unset;
+  right: -20px;
+}
+
+.hint-container {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 5px);
+  z-index: 1000;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: $background;
+  user-select: none;
+  animation: hint-container-appear .2s .5s both;
+  transform: translateX(-50%);
+  box-shadow: 0 0 2px 2px $background-darker;
+  @include border;
+  @include tablet {
+    .data-prop-name & {
+      @include shift-right;
+    }
+    .data-value & {
+      @include shift-left;
+    }
+  }
+  &.definitions {
+    width: 360px;
+    padding-bottom: 15px;
+    .hint-item {
+      margin-bottom: 8px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    @include mobile {
+      width: min(280px, 100vw - 60px);
+    }
+  }
+  &.values {
+    width: 250px;
+    & .hint-item {
+      margin-bottom: 5px;
+      padding-bottom: 6px;
+      @include border-bottom-dotted;
+      &:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+  @include hover {
+    display: none !important;
+  }
+  p {
+    margin-bottom: 5px;
+    line-height: 1.4em;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    & strong {
+      color: $text-accent;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+  }
+}
+
+@keyframes hint-container-appear {
+  0% {
+    opacity: 0;
+    bottom: calc(100% + 2px);
+  }
+  100% {
+    opacity: 1;
+    bottom: calc(100% + 5px);
+  }
+}
+
+.data-section:first-of-type .data-prop-name .hint-container {
+  @include shift-right;
+}
+
+.data-section:last-of-type .data-value .hint-container {
+  @include shift-left;
+}
