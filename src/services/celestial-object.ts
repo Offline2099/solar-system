@@ -135,8 +135,13 @@ const orbitalCharacteristics = (
           {
             name: 'Period',
             hint: [Hint.orbitalPeriod],
-            value: { value: object.orbit.period, unit: Units.y },
-            altValues: [Convert.y_to_d(object.orbit.period)]
+            value: { 
+              value: object.orbit.period,
+              unit: type === CelestialEntityType.moon ? Units.d : Units.y
+            },
+            altValues: type === CelestialEntityType.moon 
+              ? [Convert.d_to_h(object.orbit.period)]
+              : [Convert.y_to_d(object.orbit.period)]
           },
           {
             name: 'Speed',
