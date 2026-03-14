@@ -678,7 +678,118 @@
           "synodic": 0.718,
           "tilt": 82.23
         },
-        "moons": []
+        "moons": [
+          {
+            "name": "Titania",
+            "description": [
+              "Titania is the largest moon of Uranus and the eighth-largest moon in the Solar System. Titania's orbit has a small eccentricity and is inclined very little relative to the equator of Uranus. Titania is a tidally locked satellite, with one side always pointing towards Uranus.",
+              "Titania consists of approximately equal amounts of ice and rock, and probably has a rocky core and an icy mantle. Its surface is relatively dark and slightly red in color, covered with numerous impact craters reaching up to 326 km in diameter. The surface is also cut by a system of enormous canyons formed when its interior expanded during the later stages of its evolution.",
+              "Titania was discovered by William Herschel in 1787. The only close-up images of Titania were captured by the Voyager 2 probe during its flyby in 1986. No other spacecraft has ever visited it since then."
+            ],
+            "radius": 788.4,
+            "mass": 3.455e+21,
+            "density": 1683,
+            "surfaceGravity": 0.371,
+            "escapeVelocity": 765,
+            "orbit": {
+              "radius": {
+                "min": 435215,
+                "max": 436605,
+                "avg": 435910
+              },
+              "period": 8.706,
+              "speed": 3.64
+            }
+          },
+          {
+            "name": "Oberon",
+            "description": [
+              "Oberon is the outermost and second-largest major moon of Uranus. Its orbit has a small eccentricity and a low inclination relative to the equator of Uranus. Oberon is tidally locked, with one side always pointing towards Uranus.",
+              "Similarly to Titania, Oberon  consists of approximately equal amounts of ice and rock and probably has a rocky core and an icy mantle. The surface of Oberon, which is dark and slightly red in color, appears to have been primarily shaped by asteroid and comet impacts. It is covered by numerous impact craters reaching 210 km in diameter.",
+              "Oberon was discovered by William Herschel in 1787. The only close-up images of Oberon were captured by the Voyager 2 probe during its flyby in 1986. No other spacecraft has ever visited it since then."
+            ],
+            "radius": 761.4,
+            "mass": 3.110e+21,
+            "density": 1682,
+            "surfaceGravity": 0.358,
+            "escapeVelocity": 738,
+            "orbit": {
+              "radius": {
+                "min": 582871,
+                "max": 584169,
+                "avg": 583520
+              },
+              "period": 13.463,
+              "speed": 3.15
+            }
+          },
+          {
+            "name": "Umbriel",
+            "description": [
+              "Umbriel is the third-largest moon of Uranus. Umbriel is tidally locked, with one side always pointing towards Uranus.",
+              "Umbriel consists mainly of ice with a substantial fraction of rock. It likely has a rocky core and an icy mantle. The surface of Umbriel  is the darkest among Uranian moons, covered by numerous impact craters reaching 210 km in diameter. The most prominent surface feature is a ring of bright material (likely, carbon dioxide ice) on the floor of Wunda crater.",
+              "Umbriel was discovered by William Lassell in 1851. The only close-up images of Umbriel were captured by the Voyager 2 probe during its flyby in 1986. No other spacecraft has ever visited it since then."
+            ],
+            "radius": 584.7,
+            "mass": 1.289e+21,
+            "density": 1539,
+            "surfaceGravity": 0.252,
+            "escapeVelocity": 542,
+            "orbit": {
+              "radius": {
+                "min": 264962,
+                "max": 267037,
+                "avg": 266000
+              },
+              "period": 4.144,
+              "speed": 4.67
+            }
+          },
+          {
+            "name": "Ariel",
+            "description": [
+              "Ariel is the fourth-largest moon of Uranus. It orbits and rotates in the planet's equatorial plane, which is nearly perpendicular to its orbit. This gives Ariel an extreme seasonal cycle.",
+              "Ariel is composed of ice and rocky material in roughly equal parts.  Its surface can be divided into three terrain types: cratered terrain (oldest and most extensive, centered on the south pole), ridged terrain (bands of ridges and troughs hundreds of kilometers in extent), and plains (smooth areas, likely formed through volcanic processes). Ariel is the most reflective of Uranian moons.",
+              "Ariel was discovered by William Lassell in 1851. The only close-up images of Ariel were captured by the Voyager 2 probe during its flyby in 1986. The Hubble Space Telescope captured a rare transit made by Ariel on Uranus in 2006."
+            ],
+            "radius": 578.9,
+            "mass": 1.233e+21,
+            "density": 1517,
+            "surfaceGravity": 0.246,
+            "escapeVelocity": 533,
+            "orbit": {
+              "radius": {
+                "min": 190670,
+                "max": 191129,
+                "avg": 190900
+              },
+              "period": 2.52,
+              "speed": 5.51
+            }
+          },
+          {
+            "name": "Miranda",
+            "description": [
+              "Miranda is the smallest and innermost of the five round satellites of Uranus. Of all round moons of the Solar System, it has the smallest orbit around a major planet, with an orbital period of only 34 hours.",
+              "Miranda is the least dense of Uranian round satellites, which suggests a composition of more than 60% water ice. The surface of Miranda is a mosaic of highly varied zones, with fractures, faults, valleys, craters, ridges, gorges, depressions, cliffs, and terraces.",
+              "Miranda is almost invisible to amateur telescopes. It was discovered by Gerard Kuiper in 1948. The only close-up images of Miranda were captured by the Voyager 2 probe during its flyby in 1986. No other spacecraft has ever visited it since then."
+            ],
+            "radius": 235.8,
+            "mass": 6.293e+19,
+            "density": 1148,
+            "surfaceGravity": 0.076,
+            "escapeVelocity": 189,
+            "orbit": {
+              "radius": {
+                "min": 129221,
+                "max": 129558,
+                "avg": 129390
+              },
+              "period": 1.413,
+              "speed": 6.66
+            }
+          }
+        ]
       },
       {
         "name": "Neptune",
