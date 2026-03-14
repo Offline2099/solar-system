@@ -819,7 +819,32 @@
           "synodic": 0.671,
           "tilt": 28.32
         },
-        "moons": []
+        "moons": [
+          {
+            "name": "Triton",
+            "description": [
+              "Triton is Neptune's largest natural satellite. It is the only moon of Neptune massive enough to be rounded under its own gravity. Triton is the only large moon in the Solar System with a retrograde orbit, revolving in the direction opposite to Neptune's rotation.",
+              "Triton is larger than all known dwarf planets. It may have originated in the Kuiper belt as a dwarf planet, captured into orbit by Neptune's gravity.",
+              "Triton is composed of 30 to 45 percent water ice by mass, with the remainder consisting mostly of rock and metal. It has an icy crust atop a probable subsurface ocean of liquid water and a solid, rocky-metallic core at its center.",
+              "Triton is one of the most geologically active bodies in the Solar System. Its surface is less than 100 million years old on average, covered with frozen nitrogen, and has very few impact craters. Triton has an atmosphere that consists mostly of nitrogen, with trace amounts of carbon monoxide and methane. Its average surface temperature is around -237 °C.",
+              "Triton was discovered by William Lassell in 1846, just 17 days after the discovery of Neptune. The only close-up images of Triton were captured by the Voyager 2 probe during its flyby in 1989. No other spacecraft has ever visited it since then."
+            ],
+            "radius": 1353.4,
+            "mass": 2.139e+22,
+            "density": 2061,
+            "surfaceGravity": 0.779,
+            "escapeVelocity": 1455,
+            "orbit": {
+              "radius": {
+                "min": 354743,
+                "max": 354775,
+                "avg": 354759
+              },
+              "period": 5.877,
+              "speed": 4.39
+            }
+          }
+        ]
       }
     ]
   },
