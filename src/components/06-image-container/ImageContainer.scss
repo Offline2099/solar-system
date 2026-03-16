@@ -1,0 +1,69 @@
+@use '../../styles' as *;
+
+$padding: 5px;
+
+$major-image-size: 448px;
+$minor-image-size: 350px;
+$mobile-image-size: 244px;
+
+.entity-image {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  padding: $padding;
+  border-radius: 10px;
+  user-select: none;
+  &:before {
+    content: '';
+    position: absolute;
+    top: $padding;
+    left: $padding;
+    z-index: 1;
+    @include square(calc(100% - 2 * $padding));
+    @include dots;
+  }
+  @include shadow;
+  @include square($major-image-size);
+  @include tablet {
+    margin: 0 auto;
+  }
+  @include mobile {
+    padding: 1px;
+    @include square($mobile-image-size);
+  }
+  &.notable-object {
+    @include square($minor-image-size);
+    @include mobile {
+      @include square($mobile-image-size);
+    }
+  }
+  &.region {
+    width: $major-image-size;
+    height: calc(3 * $major-image-size / 4);
+    @include mobile {
+      width: $mobile-image-size;
+      height: calc(3 * $mobile-image-size / 4);
+    }
+  } 
+  img {
+    display: block;
+    border-radius: 10px;
+    z-index: 2;
+    @include square(100%);
+    &.spinner {
+      margin: auto;
+      opacity: .6;
+      animation: rotate 5s infinite;
+      @include square(100px);
+      @include mobile {
+        @include square(50px);
+      }
+    }
+    &.image {
+      animation: fade-in .5s;
+      &.loading {
+        display: none;
+      }
+    }
+  }
+}

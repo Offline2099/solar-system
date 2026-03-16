@@ -1,5 +1,6 @@
 import './CelestialObjectDataContainer.scss';
 import { HintType } from '../../constants/ui/hint-type.enum';
+import { ENTITY_TYPE_NAME } from '../../constants/data/entity-type-name';
 import { CelestialEntityData } from '../../types/ui/celestial-entity-data.interface';
 import { objectData } from '../../services/celestial-object';
 import DataValueContainer from '../04-data-value-container/DataValueContainer';
@@ -7,7 +8,7 @@ import HintContainer from '../05-hint-container/HintContainer';
 
 const CelestialObjectData = (data: CelestialEntityData) => {
   return (
-    <div className={`data-container ${data.type}`}>
+    <div className={`data-container ${ENTITY_TYPE_NAME[data.type]}`}>
       {objectData(data).map((section, sectionIndex) => 
         <div key={sectionIndex} className='data-section'>
           <div className='data-section-header'>{section.name}</div>

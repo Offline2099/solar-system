@@ -3,14 +3,13 @@ import { CelestialEntityType } from '../../constants/data/celestial-entity-type.
 import { CelestialEntityData } from '../../types/ui/celestial-entity-data.interface';
 import { Planet } from '../../types/data/planet.interface';
 import { Region } from '../../types/data/region.interface';
-import { entityImageURL } from '../../services/url';
 import Collapsible from '../00-collapsible/Collapsible';
 import CelestialObjectDataContainer from '../03-celestial-object-data-container/CelestialObjectDataContainer';
+import ImageContainer from '../06-image-container/ImageContainer';
 
 const CelestialEntityContainer = (data: CelestialEntityData) => {
   const isHeadlessContainer: boolean = 
     data.type === CelestialEntityType.star || data.type === CelestialEntityType.region;
-  const entityImage: string = entityImageURL(data.entity.name);
   const content = (): CelestialEntityData[] => {
     switch (data.type) {
       case CelestialEntityType.region:
@@ -31,9 +30,7 @@ const CelestialEntityContainer = (data: CelestialEntityData) => {
         <div className='entity-description'>
           {data.entity.description.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
         </div>
-        <div className={`entity-image ${data.type}`}>
-          <img src={entityImage} alt={data.entity.name} />
-        </div>
+        <ImageContainer type={data.type} name={data.entity.name} />
       </div>
       {data.type !== CelestialEntityType.region && <CelestialObjectDataContainer {...data} />}
       {content().map((object, index) => <CelestialEntityContainer key={index} {...object} />)}

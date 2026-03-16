@@ -30,29 +30,4 @@
       }
     }
   }
-  .entity-image {
-    padding: 5px;
-    border-radius: 10px;
-    user-select: none;
-    @include shadow;
-    @include dots;
-    @include tablet {
-      margin: 0 auto;
-    }
-    @include mobile {
-      padding: 1px;
-    }
-    img {
-      display: block;
-      border-radius: 10px;
-      @include square(450px);
-      @include mobile {
-        @include square(244px);
-      }
-    }
-    &.notable-object img,
-    &.moon img {
-      @include square(350px);
-    }
-  }
 }
