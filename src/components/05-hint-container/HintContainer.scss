@@ -21,7 +21,7 @@
   border-radius: 10px;
   background: $background;
   user-select: none;
-  animation: hint-container-appear .2s .5s both;
+  animation: hint-container-appear .2s .2s both;
   transform: translateX(-50%);
   box-shadow: 0 0 2px 2px $background-darker;
   @include border;

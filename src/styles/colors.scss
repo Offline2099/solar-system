@@ -1,11 +1,17 @@
 @use 'sass:color';
 
-$text-normal: hsl(200, 60%, 65%);
-$text-accent: hsl(180, 60%, 55%);
+$base: hsl(200, 60%, 50%);
+$accent: hsl(180, 60%, 50%);
 
-$border-normal: color.adjust($text-normal, $alpha: -0.4);
-$border-darker: color.adjust($text-normal, $alpha: -0.6);
+$text-normal: color.adjust($base, $lightness: 15%);
+$text-accent: color.adjust($accent, $lightness: 5%);
+$text-selection: color.adjust($accent, $lightness: 30%);
 
-$background: hsla(200, 60%, 8%, .95);
-$background-darker: hsla(200, 60%, 5%, .9);
-$background-hovered: hsl(200, 60%, 13%);
+$border-normal: color.adjust($base, $lightness: 15%, $alpha: -0.4);
+$border-darker: color.adjust($base, $lightness: 15%, $alpha: -0.6);
+
+$background: color.adjust($base, $lightness: -42%, $alpha: -0.05);
+$background-darker: color.adjust($base, $lightness: -45%, $alpha: -0.1);
+$background-hovered: color.adjust($base, $lightness: -37%);
+$background-accent: color.adjust($accent, $lightness: -45%, $alpha: -0.1);
+$background-selection: color.adjust($base, $lightness: -5%, $alpha: -0.6);

@@ -19,6 +19,6 @@ body {
 }
 
 ::selection {
-  color: lighten($text-accent, 25);
-  background: darken($border-darker, 20);
+  color: $text-selection;
+  background: $background-selection;
 }
