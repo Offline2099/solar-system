@@ -38,3 +38,22 @@
 		linear-gradient($dot-bg calc($dot-space - $dot-size), transparent 1%) center / $dot-space $dot-space,
 		$dot-color;
 }
+
+@mixin chevron($size, $font-size) {
+  & > * > .section-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding-bottom: 3px;
+    font-size: $font-size;
+    font-weight: 400;
+    user-select: none;
+    transition: .2s;
+    transform: rotateZ(90deg);
+    @include square($size);
+  }
+  &.collapsed .section-chevron {
+    transform: rotateZ(270deg);
+  }
+}

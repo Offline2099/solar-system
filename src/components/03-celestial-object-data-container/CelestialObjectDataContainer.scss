@@ -23,19 +23,33 @@
     flex-basis: 100% !important;
     margin-right: 0;
     margin-bottom: 10px;
+    @include chevron(20px, 16px);
     &:last-of-type {
       margin-bottom: 0;
     }
   }
+  @include mobile {
+    @include chevron(18px, 14px);
+  }
   &-header {
+    display: flex;
     padding: 10px 15px;
     border-radius: 10px 10px 0 0;
     font-size: 18px;
     font-variant: small-caps;
     letter-spacing: .04em;
     @include shadow-bottom;
+    @include tablet {
+      cursor: pointer;
+    }
     @include mobile {
       font-size: 16px;
+    }
+    .section-chevron {
+      display: none;
+      @include tablet {
+        display: inline-flex;
+      }
     }
   }
   &-body {
@@ -44,8 +58,17 @@
     padding: 10px;
     font-size: 16px;
     letter-spacing: .015em;
+    animation: fade-in .3s;
     @include mobile {
       font-size: 14px;
+    }
+  }
+  @include tablet {
+    &.collapsed &-header {
+      box-shadow: none;
+    }
+    &.collapsed &-body {
+      display: none;
     }
   }
 }

@@ -25,26 +25,6 @@ $section-margin: 10px;
   }
 }
 
-@mixin chevron($size, $font-size) {
-  .section-chevron {
-    display: inline-flex;
-    width: $size;
-    height: $size;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    padding-bottom: 3px;
-    font-size: $font-size;
-    font-weight: 400;
-    user-select: none;
-    transition: .2s;
-    transform: rotateZ(90deg);
-  }
-  &.collapsed .section-chevron {
-    transform: rotateZ(270deg);
-  }
-}
-
 section {
   display: flex;
   flex-direction: column;
