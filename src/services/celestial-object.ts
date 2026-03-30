@@ -62,8 +62,16 @@ const physicalCharacteristics = (
           {
             name: 'Escape Velocity',
             hint: [Hint.escapeVelocity],
-            value: { value: object.escapeVelocity, unit: Units.kmps },
-            altValues: [Convert.kmps_to_mips(object.escapeVelocity)]
+            value: {
+              value: object.escapeVelocity,
+              unit: type === CelestialEntityType.planet ? Units.kmps : Units.mps
+            },
+            altValues: [
+              type === CelestialEntityType.planet 
+                ? Convert.kmps_to_mips(object.escapeVelocity)
+                : Convert.mps_to_kmph(object.escapeVelocity),
+                  Convert.mps_to_miph(object.escapeVelocity)
+            ]
           }
         ]
       }
