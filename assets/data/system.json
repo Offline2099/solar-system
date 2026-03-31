@@ -5,11 +5,11 @@
     "content": {
       "name": "Sun",
       "description": [
-        "The Sun is the star at the center of the Solar System, around which all the planets orbit. It is classified as a G-type main-sequence star (G2V).",
-        "The visible surface of the Sun is known as the photosphere, where the temperature is around 5,500 °C. The Sun's core reaches a much higher temperature of about 15.7 million °C.",
-        "The Sun is primarily composed of hydrogen (about 74%) and helium (about 24%), with trace amounts of heavier elements like oxygen, carbon, neon, and iron. It is a massive, hot ball of plasma, inflated and heated by energy produced by nuclear fusion reactions at its core. Every second, the Sun's core fuses about 600 million tons of hydrogen into helium and converts 4 million tons of matter into energy.",
-        "The Sun formed approximately 4.6 billion years ago from the gravitational collapse of matter within a region of a large molecular cloud. Its is now about halfway through its main-sequence stage, and will run out of hydrogen in the core in approximately 5 billion years.",
-        "The Sun goes through an 11-year solar cycle, during which the number of sunspots (regions of reduced temperature caused by concentrations of magnetic flux that appear darker on the Sun's surface) and solar flares (localized outbursts of electromagnetic radiation) varies."
+        "The Sun is the star at the center of the Solar System. All of the planets in the Solar System orbit around it.",
+        "The Sun is primarily composed of hydrogen (about 74%) and helium (about 24%), with trace amounts of heavier elements, such as oxygen, carbon, neon, iron. It is a massive, hot ball of plasma, inflated and heated by nuclear fusion reactions in its core. Every second, the Sun's core fuses about 600 million tons of hydrogen into helium, converting 4 million tons of matter into energy.",
+        "The Sun formed approximately 4.6 billion years ago from the gravitational collapse of matter within a region of a large molecular cloud. It is now about halfway through its main sequence stage, and will run out of hydrogen in its core in approximately 5 billion years.",
+        "The visible surface of the Sun is known as the photosphere, where the temperature is around 5500 °C. The Sun's core reaches a much higher temperature of about 15.7 million °C.",
+        "A variety of natural phenomena can be observed on the Sun's surface. Sunspots are darker regions with lower temperatures, caused by concentrations of magnetic flux. Solar flares are localized outbursts of electromagnetic radiation. The Sun goes through an 11-year solar cycle, during which the number of sunspots and solar flares varies."
       ],
       "radius": 696300,
       "mass": 332950,
@@ -40,10 +40,10 @@
       {
         "name": "Mercury",
         "description": [
-          "Mercury is the closest planet to the Sun and the smallest in the Solar System. It is one of the four terrestrial planets. Mercury has no natural satellites.",
-          "The surface of Mercury is heavily cratered, as a result of multiple impact events that have accumulated over billions of years in the absence of an atmosphere. Its largest crater, Caloris Planitia, has a diameter of 1,550 km and is one-third the diameter of the planet.",
-          "Mercury has widely varying surface temperatures, with the equatorial regions ranging from -170 °C at night to 420 °C during sunlight. Due to the very small axial tilt, the planet's poles are permanently shadowed.",
-          "Mercury is visible to the naked eye and has been observed since the ancient times. The first spacecraft to visit Mercury was NASA's Mariner 10 in 1974-1975, which mapped about 45% of the planet's surface. The second NASA probe, named MESSENGER, orbited Mercury between 2011 and 2015, collecting a variety of scientific data."
+          "Mercury is the closest planet to the Sun and the smallest planet in the Solar System. It is one of the four terrestrial planets. Mercury has no natural satellites",
+          "The surface of Mercury is heavily cratered, as the result of multiple impact events that have accumulated over billions of years in the absence of an atmosphere. Its largest crater, Caloris Planitia, has a diameter of 1550 km and is one-third the diameter of the planet.",
+          "Mercury has widely varying surface temperatures, ranging from -170 °C at night to 420 °C during the day in its equatorial regions. The planet's poles are permanently shadowed due to its very small axial tilt.",
+          "Mercury is visible to the naked eye and has been observed since ancient times. The first spacecraft to visit Mercury was Mariner 10, which mapped about 45% of the planet's surface in 1974-1975. The second NASA probe, named MESSENGER, orbited Mercury between 2011 and 2015, collecting a variety of scientific data."
         ],
         "radius": 2440,
         "mass": 0.055,
@@ -70,10 +70,10 @@
         "name": "Venus",
         "description": [
           "Venus is the second planet from the Sun. It is a terrestrial planet and is the closest in mass and size to its orbital neighbour Earth. Venus has no natural satellites.",
-          "Venus has the densest atmosphere of the terrestrial planets, consisting mostly of carbon dioxide with a thick, global sulfuric acid cloud cover. It has an average surface temperature of 464 °C and an atmospheric pressure 92 times greater than on Earth at sea level.",
-          "Venus lacks plate tectonics, which has led to fewer geological features like mountains and valleys compared to Earth. Radar mapping has revealed vast volcanic plains, highland regions, and thousands of volcanoes, some of which may still be active.",
+          "Venus has the densest atmosphere of the terrestrial planets, consisting mostly of carbon dioxide. The entire planet is covered with thick clouds of sulfuric acid. It has an average surface temperature of 464 °C and an atmospheric pressure 92 times greater than on Earth at sea level.",
+          "Venus lacks plate tectonics. It has fewer geological features, such as mountains and valleys, compared to Earth. Radar mapping has revealed vast volcanic plains, highland regions, and thousands of volcanoes, some of which may still be active.",
           "Venus is visible to the naked eye, and it is the third brightest object in the Earth's sky. It always appears close to the Sun, as either a \"morning star\" or an \"evening star\".",
-          "The first spacecraft to fly past Venus was Venera 1 in 1961. In 1966, Venera 3 became the first probe to reach the planet's surface. The first images from the surface were obtained by Venera 9 in 1975. Between 1990 and 1994, Magellan spacecraft operated in orbit and mapped the planet. There have been a few dozen of successful flyby missons."
+          "The first spacecraft to fly past Venus was Venera 1 in 1961. In 1966, Venera 3 became the first probe to reach the planet's surface. The first images from the surface were obtained by Venera 9 in 1975. Between 1990 and 1994, Magellan spacecraft operated in orbit and mapped the planet. There have been a few dozen of successful flyby missions."
         ],
         "radius": 6052,
         "mass": 0.815,
@@ -100,9 +100,9 @@
         "name": "Earth",
         "description": [
           "Earth is the third planet from the Sun. It is the only known planet to support life. Earth is orbited by one permanent natural satellite, the Moon.",
-          "Earth has a stronger magnetic field than other terresrial planets. It prevents the Earth's atmosphere from getting blown away by the solar wind and protects the planet's surface from harmful cosmic radiation.",
+          "Earth has a stronger magnetic field than other terrestrial planets. It prevents the Earth's atmosphere from getting blown away by the solar wind and protects the planet's surface from harmful cosmic radiation.",
           "Earth's atmosphere is primarily composed of nitrogen (78%) and oxygen (21%), with trace amounts of carbon dioxide and other gases. Water vapor is widely present in the atmosphere, forming clouds that cover most of the planet.",
-          "Earth is the only planet in the Solar System sustaining liquid surface water. Most of the planet's surface is covered by oceans (70.8%), with the remaining 29.2% is occupied by continents and islands. Earth's surface has various geological features shaped by erosion, tectonic activity, and volcanic eruptions.",
+          "Earth is the only planet in the Solar System sustaining liquid surface water. Most of the planet's surface is covered by oceans (70.8%), with the remaining 29.2% occupied by continents and islands. The planet has various geological features shaped by erosion, tectonic activity, and volcanic eruptions.",
           "Earth has a wide variety of climate zones and ecosystems (forests, grasslands, deserts, tundra, marine and freshwater biomes, polar ice caps), each with its own biodiversity."
         ],
         "radius": 6371,
@@ -153,10 +153,10 @@
       {
         "name": "Mars",
         "description": [
-          "Mars is the fourth planet from the Sun and the outermost terrestrial planet. It is the second smallest planet of the Solar System. Mars has two natural satellites, Phobos and Deimos.",
+          "Mars is the fourth planet from the Sun and the outermost terrestrial planet. It is the second smallest planet in the Solar System. Mars has two natural satellites, Phobos and Deimos.",
           "Mars has a thin atmosphere composed mostly of carbon dioxide, with a surface pressure of 6 to 7 millibars, less than 1% of Earth's. The atmosphere is quite dusty due to iron oxide particles suspended in it. Surface temperatures vary from about -110 °C to 35 °C and follow seasonal patterns.",
-          "The surface of Mars is orange-red, covered in iron oxide dust. The relatively flat plains in northern parts of Mars strongly contrast with the cratered terrain in southern highlands. Mars hosts many enormous extinct volcanos (such as Olympus Mons, 21.9 km tall) and one of the largest canyons in the Solar System (Valles Marineris, 4,000 km long). The planet's polar ice caps are composed of water and carbon dioxide.",
-          "Mars is visible to the naked eye and has been observed since the ancient times. The first flyby was achieved by in 1965 by the Mariner 4 probe. The first spacecraft to orbit the planet was the Mars 2 probe in 1971. The first landing was made by the Viking 1 probe in 1976. Since the early 21st century, Mars has been actively explored by unmanned spacecraft and rovers."
+          "The surface of Mars is orange-red, covered in iron oxide dust. Relatively flat plains in its northern regions strongly contrast with the cratered terrain of the southern highlands. Mars has enormous extinct volcanoes (such as Olympus Mons, 21.9 km tall) and one of the largest canyons in the Solar System (Valles Marineris, 4000 km long). The planet's polar ice caps are composed of water and carbon dioxide.",
+          "Mars is visible to the naked eye and has been observed since ancient times. The first flyby was achieved in 1965 by the Mariner 4 probe. The first spacecraft to orbit the planet was the Mars 2 probe in 1971. The first landing was made by the Viking 1 probe in 1976. Since the early 21st century, Mars has been actively explored by unmanned spacecraft and rovers."
         ],
         "radius": 3389,
         "mass": 0.107,
