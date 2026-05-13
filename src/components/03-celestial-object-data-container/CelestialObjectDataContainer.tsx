@@ -1,5 +1,5 @@
 import './CelestialObjectDataContainer.scss';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { HintType } from '../../constants/ui/hint-type.enum';
 import { ENTITY_TYPE_NAME } from '../../constants/data/entity-type-name';
 import { CelestialEntityData } from '../../types/ui/celestial-entity-data.interface';
@@ -9,7 +9,7 @@ import DataValueContainer from '../04-data-value-container/DataValueContainer';
 import HintContainer from '../05-hint-container/HintContainer';
 
 const CelestialObjectData = (data: CelestialEntityData) => {
-  const sections: CelestialObjectDataSection[] = objectData(data);
+  const sections: CelestialObjectDataSection[] = useMemo(() => objectData(data), [data]);
   const [collapsedSections, setCollapsedState] = useState<Set<number>>(new Set(sections.keys()));
   const toggleSection = (index: number) => setCollapsedState(prev => {
     const next = new Set(prev);

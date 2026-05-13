@@ -23,14 +23,14 @@ const physicalCharacteristics = (
             ? {
                 name: 'Mean Diameter',
                 hint: [Hint.meanDiameter],
-                value: { value: (object as NotableObject).diameter, unit: Units.km} ,
-                altValues: [Convert.km_to_mi((object as NotableObject).diameter)]
+                value: { value: (object as NotableObject).diameter, unit: Units.km},
+                altValues: Convert.kilometersToAltUnits((object as NotableObject).diameter)
               }
             : {
                 name: 'Radius',
                 hint: [Hint.radius], 
                 value: { value: (object as Star | Planet | Moon).radius, unit: Units.km },
-                altValues: [Convert.km_to_mi((object as Star | Planet | Moon).radius)]
+                altValues: Convert.kilometersToAltUnits((object as Star | Planet | Moon).radius)
               },
           {
             name: 'Mass',
@@ -42,11 +42,8 @@ const physicalCharacteristics = (
                : Units.earths
             }, 
             altValues: type === CelestialEntityType.notable || type === CelestialEntityType.moon
-              ? [Convert.kg_to_lb(object.mass)]
-              : [
-                  Convert.earths_to_kg(object.mass),
-                  Convert.earths_to_lb(object.mass)
-                ]
+              ? Convert.kilogramsToAltUnits(object.mass)
+              : Convert.earthsToAltUnits(object.mass)
           },
           {
             name: 'Density',
@@ -57,7 +54,7 @@ const physicalCharacteristics = (
             name: 'Surface Gravity',
             hint: [Hint.surfaceGravity],
             value: { value: object.surfaceGravity, unit: Units.mps2 },
-            altValues: [Convert.mps2_to_g(object.surfaceGravity)]
+            altValues: Convert.metersPerSecondSquaredToAltUnits(object.surfaceGravity)
           },
           {
             name: 'Escape Velocity',
@@ -68,12 +65,9 @@ const physicalCharacteristics = (
                 ? Units.kmps
                 : Units.mps
             },
-            altValues: [
-              type === CelestialEntityType.star || type === CelestialEntityType.planet 
-                ? Convert.kmps_to_mips(object.escapeVelocity)
-                : Convert.mps_to_kmph(object.escapeVelocity),
-                  Convert.mps_to_miph(object.escapeVelocity)
-            ]
+            altValues: type === CelestialEntityType.star || type === CelestialEntityType.planet 
+              ? Convert.kilometersPerSecondToAltUnits(object.escapeVelocity)
+              : Convert.metersPerSecondToAltUnits(object.escapeVelocity)
           }
         ]
       }
@@ -99,11 +93,8 @@ const orbitalCharacteristics = (
               unit: type === CelestialEntityType.moon ? Units.km : Units.au
             },
             altValues: type === CelestialEntityType.moon
-              ? [Convert.km_to_mi(object.orbit.radius.avg)]
-              : [
-                  Convert.au_to_km(object.orbit.radius.avg),                
-                  Convert.au_to_mi(object.orbit.radius.avg)
-                ]
+              ? Convert.kilometersToAltUnits(object.orbit.radius.avg)
+              : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.avg)
           },          
           {
             name: type === CelestialEntityType.moon ? 'Periapsis' : 'Perihelion',
@@ -115,11 +106,8 @@ const orbitalCharacteristics = (
               unit: type === CelestialEntityType.moon ? Units.km : Units.au
             },
             altValues: type === CelestialEntityType.moon
-              ? [Convert.km_to_mi(object.orbit.radius.min)]
-              : [
-                  Convert.au_to_km(object.orbit.radius.min),
-                  Convert.au_to_mi(object.orbit.radius.min)
-                ]
+              ? Convert.kilometersToAltUnits(object.orbit.radius.min)
+              : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.min)
           },
           {
             name: type === CelestialEntityType.moon ? 'Apoapsis' : 'Aphelion',
@@ -131,11 +119,8 @@ const orbitalCharacteristics = (
               unit: type === CelestialEntityType.moon ? Units.km : Units.au
             },
             altValues: type === CelestialEntityType.moon
-              ? [Convert.km_to_mi(object.orbit.radius.max)]
-              : [
-                  Convert.au_to_km(object.orbit.radius.max),
-                  Convert.au_to_mi(object.orbit.radius.max)
-                ]
+              ? Convert.kilometersToAltUnits(object.orbit.radius.max)
+              : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.max)
           }
         ]
       },
@@ -150,14 +135,14 @@ const orbitalCharacteristics = (
               unit: type === CelestialEntityType.moon ? Units.d : Units.y
             },
             altValues: type === CelestialEntityType.moon 
-              ? [Convert.d_to_h(object.orbit.period)]
-              : [Convert.y_to_d(object.orbit.period)]
+              ? Convert.daysToAltUnits(object.orbit.period)
+              : Convert.yearsToAltUnits(object.orbit.period)
           },
           {
             name: 'Speed',
             hint: [Hint.orbitalSpeed],
             value: { value: object.orbit.speed, unit: Units.kmps },
-            altValues: [Convert.kmps_to_mips(object.orbit.speed)]
+            altValues: Convert.kilometersPerSecondToAltUnits(object.orbit.speed)
           }
         ]
       }
@@ -176,13 +161,13 @@ const planetAxialRotation = (planet: Planet): CelestialObjectDataSection => {
             name: 'Sidereal Period',
             hint: [Hint.siderealPeriod],
             value: { value: planet.rotation.sidereal, unit: Units.d },
-            altValues: [Convert.d_to_h(planet.rotation.sidereal)]
+            altValues: Convert.daysToAltUnits(planet.rotation.sidereal)
           },
           {
             name: 'Synodic Period',
             hint: [Hint.synodicPeriod],
             value: { value: planet.rotation.synodic, unit: Units.d },
-            altValues: [Convert.d_to_h(planet.rotation.synodic)]
+            altValues: Convert.daysToAltUnits(planet.rotation.synodic)
           },
           {
             name: 'Axial Tilt',
@@ -205,12 +190,14 @@ const starMotion = (star: Star): CelestialObjectDataSection => {
           {
             name: 'Equator',
             hint: [Hint.axialRotationPeriod],
-            value: { value: star.axialRotation.equator, unit: Units.d }
+            value: { value: star.axialRotation.equator, unit: Units.d },
+            altValues: Convert.daysToAltUnits(star.axialRotation.equator)
           },
           {
             name: 'Poles',
             hint: [Hint.axialRotationPeriod],
-            value: { value: star.axialRotation.poles, unit: Units.d }
+            value: { value: star.axialRotation.poles, unit: Units.d },
+            altValues: Convert.daysToAltUnits(star.axialRotation.poles)
           }
         ]
       },
@@ -221,10 +208,7 @@ const starMotion = (star: Star): CelestialObjectDataSection => {
             name: 'Radius',
             hint: [Hint.galacticOrbitRadius, Hint.lightYear],
             value: { value: star.galacticOrbit.radius, unit: Units.ly },
-            altValues: [
-              Convert.ly_to_km(star.galacticOrbit.radius),
-              Convert.ly_to_mi(star.galacticOrbit.radius)
-            ]
+            altValues: Convert.lightYearsToAltUnits(star.galacticOrbit.radius)
           },
           {
             name: 'Period',
@@ -235,7 +219,7 @@ const starMotion = (star: Star): CelestialObjectDataSection => {
             name: 'Speed',
             hint: [Hint.galacticOrbitSpeed],
             value: { value: star.galacticOrbit.speed, unit: Units.kmps },
-            altValues: [Convert.kmps_to_mips(star.galacticOrbit.speed)]
+            altValues: Convert.kilometersPerSecondToAltUnits(star.galacticOrbit.speed)
           }
         ]
       }

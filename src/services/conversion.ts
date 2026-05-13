@@ -3,90 +3,145 @@ import { Range } from '../types/general/range.interface';
 import { DataUnit } from '../types/ui/data-unit.interface';
 import { DataValue } from '../types/ui/data-value.interface';
 
-const convertDataValue = (value: number | Range, ratio: number, unit: DataUnit): DataValue => {
+const convertValue = (value: number | Range, ratio: number, outputUnit: DataUnit): DataValue => {
   return {
-    value: typeof value !== 'number' 
+    value: typeof value !== 'number'
       ? {
           min: ratio * (value as Range).min,
           max: ratio * (value as Range).max
         }
       : ratio * (value as number),
-    unit
+    unit: outputUnit
   };
-}
+};
+
+const convertDataValue = convertValue;
 
 //=============================================================================
-//  Time 
+//  Time
 //=============================================================================
 
-export const y_to_d = (time: number | Range): DataValue => {
-  return convertDataValue(time, 365.25, Units.d);
-}
+const yearsToDays = (time: number | Range): DataValue => {
+  return convertValue(time, 365.25, Units.d);
+};
 
-export const d_to_h = (time: number | Range): DataValue => {
-  return convertDataValue(time, 24, Units.h);
-}
+const daysToHours = (time: number | Range): DataValue => {
+  return convertValue(time, 24, Units.h);
+};
 
-//=============================================================================
-//  Distance 
-//=============================================================================
+export const yearsToAltUnits = (time: number | Range): DataValue[] => {
+  return [yearsToDays(time)];
+};
 
-export const ly_to_km = (distance: number | Range): DataValue => {
-  return convertDataValue(distance, 9.461e12, Units.km);
-}
-
-export const ly_to_mi = (distance: number | Range): DataValue => {
-  return convertDataValue(distance, 5.879e12, Units.mi);
-}
-
-export const au_to_km = (distance: number | Range): DataValue => {
-  return convertDataValue(distance, 1.496e8, Units.km);
-}
-
-export const au_to_mi = (distance: number | Range): DataValue => {
-  return convertDataValue(distance, 9.296e7, Units.mi);
-}
-
-export const km_to_mi = (distance: number | Range): DataValue => {
-  return convertDataValue(distance, 0.6215, Units.mi);
-}
+export const daysToAltUnits = (time: number | Range): DataValue[] => {
+  return [daysToHours(time)];
+};
 
 //=============================================================================
-//  Speed 
+//  Distance
 //=============================================================================
 
-export const kmps_to_mips = (speed: number | Range): DataValue => {
-  return convertDataValue(speed, 0.6215, Units.mips);
-}
+const kilometersToMiles = (distance: number | Range): DataValue => {
+  return convertValue(distance, 0.6215, Units.mi);
+};
 
-export const mps_to_kmph = (speed: number | Range): DataValue => {
-  return convertDataValue(speed, 3.6, Units.kmph);
-}
+const lightYearsToKilometers = (distance: number | Range): DataValue => {
+  return convertValue(distance, 9.461e12, Units.km);
+};
 
-export const mps_to_miph = (speed: number | Range): DataValue => {
-  return convertDataValue(speed, 2.237, Units.miph);
-}
+const lightYearsToMiles = (distance: number | Range): DataValue => {
+  return convertValue(distance, 5.879e12, Units.mi);
+};
+
+const astronomicalUnitsToKilometers = (distance: number | Range): DataValue => {
+  return convertValue(distance, 1.496e8, Units.km);
+};
+
+const astronomicalUnitsToMiles = (distance: number | Range): DataValue => {
+  return convertValue(distance, 9.296e7, Units.mi);
+};
+
+export const kilometersToAltUnits = (distance: number | Range): DataValue[] => {
+  return [kilometersToMiles(distance)];
+};
+
+export const lightYearsToAltUnits = (distance: number | Range): DataValue[] => {
+  return [lightYearsToKilometers(distance), lightYearsToMiles(distance)];
+};
+
+export const astronomicalUnitsToAltUnits = (distance: number | Range): DataValue[] => {
+  return [astronomicalUnitsToKilometers(distance), astronomicalUnitsToMiles(distance)];
+};
 
 //=============================================================================
-//  Acceleration 
+//  Speed
 //=============================================================================
 
-export const mps2_to_g = (acceleration: number | Range): DataValue => {
-  return convertDataValue(acceleration, 0.1019, Units.g);
-}
+const kilometersPerSecondToKilometersPerHour = (speed: number | Range): DataValue => {
+  return convertValue(speed, 3600, Units.kmph);
+};
+
+
+const kilometersPerSecondToMilesPerSecond = (speed: number | Range): DataValue => {
+  return convertValue(speed, 0.6215, Units.mips);
+};
+
+const kilometersPerSecondToMilesPerHour = (speed: number | Range): DataValue => {
+  return convertValue(speed, 2236.936292, Units.miph);
+};
+
+const metersPerSecondToKilometersPerHour = (speed: number | Range): DataValue => {
+  return convertValue(speed, 3.6, Units.kmph);
+};
+
+const metersPerSecondToMilesPerHour = (speed: number | Range): DataValue => {
+  return convertValue(speed, 2.237, Units.miph);
+};
+
+export const kilometersPerSecondToAltUnits = (speed: number | Range): DataValue[] => {
+  return [
+    kilometersPerSecondToMilesPerSecond(speed),
+    kilometersPerSecondToMilesPerHour(speed),
+    kilometersPerSecondToKilometersPerHour(speed)
+  ];
+};
+
+export const metersPerSecondToAltUnits = (speed: number | Range): DataValue[] => {
+  return [metersPerSecondToKilometersPerHour(speed), metersPerSecondToMilesPerHour(speed)];
+};
 
 //=============================================================================
-//  Mass 
+//  Acceleration
 //=============================================================================
 
-export const earths_to_kg = (mass: number | Range): DataValue => {
-  return convertDataValue(mass, 5.972e24, Units.kg);
-}
+const metersPerSecondSquaredToG = (acceleration: number | Range): DataValue => {
+  return convertValue(acceleration, 0.10197162, Units.g);
+};
 
-export const earths_to_lb = (mass: number | Range): DataValue => {
-  return convertDataValue(mass, 1.317e25, Units.lb);
-}
+export const metersPerSecondSquaredToAltUnits = (acceleration: number | Range): DataValue[] => {
+  return [metersPerSecondSquaredToG(acceleration)];
+};
 
-export const kg_to_lb =(mass: number | Range): DataValue => {
+//=============================================================================
+//  Mass
+//=============================================================================
+
+const kilogramsToPounds = (mass: number | Range): DataValue => {
   return convertDataValue(mass, 2.205, Units.lb);
-}
+};
+
+const earthsToKilograms = (mass: number | Range): DataValue => {
+  return convertDataValue(mass, 5.972e24, Units.kg);
+};
+
+const earthsToPounds = (mass: number | Range): DataValue => {
+  return convertDataValue(mass, 1.317e25, Units.lb);
+};
+
+export const kilogramsToAltUnits = (mass: number | Range): DataValue[] => {
+  return [kilogramsToPounds(mass)];
+};
+
+export const earthsToAltUnits = (mass: number | Range): DataValue[] => {
+  return [earthsToKilograms(mass), earthsToPounds(mass)];
+};
