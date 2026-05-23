@@ -15,8 +15,6 @@ const convertValue = (value: number | Range, ratio: number, outputUnit: DataUnit
   };
 };
 
-const convertDataValue = convertValue;
-
 //=============================================================================
 //  Time
 //=============================================================================
@@ -127,15 +125,15 @@ export const metersPerSecondSquaredToAltUnits = (acceleration: number | Range): 
 //=============================================================================
 
 const kilogramsToPounds = (mass: number | Range): DataValue => {
-  return convertDataValue(mass, 2.205, Units.lb);
+  return convertValue(mass, 2.205, Units.lb);
 };
 
 const earthsToKilograms = (mass: number | Range): DataValue => {
-  return convertDataValue(mass, 5.972e24, Units.kg);
+  return convertValue(mass, 5.972e24, Units.kg);
 };
 
 const earthsToPounds = (mass: number | Range): DataValue => {
-  return convertDataValue(mass, 1.317e25, Units.lb);
+  return convertValue(mass, 1.317e25, Units.lb);
 };
 
 export const kilogramsToAltUnits = (mass: number | Range): DataValue[] => {
