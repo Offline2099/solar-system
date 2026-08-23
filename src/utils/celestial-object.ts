@@ -1,13 +1,13 @@
 import * as Hint from '../constants/hints';
 import * as Units from '../constants/units';
 import * as Convert from './conversion';
-import { CelestialEntityType } from '../constants/data/celestial-entity-type.enum';
-import { CelestialEntityData } from '../types/ui/celestial-entity-data.interface';
-import { CelestialObjectDataSection } from '../types/ui/celestial-object-data-section.interface';
-import { Star } from '../types/data/star.interface';
-import { Planet } from '../types/data/planet.interface';
-import { Moon } from '../types/data/moon.interface';
-import { NotableObject } from '../types/data/notable-object.interface';
+import { CelestialEntityType } from '../constants/celestial-entity-type';
+import type { CelestialEntityData } from '../types/ui/celestial-entity-data.interface';
+import type { CelestialObjectDataSection } from '../types/ui/celestial-object-data-section.interface';
+import type { Star } from '../types/data/star.interface';
+import type { Planet } from '../types/data/planet.interface';
+import type { Moon } from '../types/data/moon.interface';
+import type { NotableObject } from '../types/data/notable-object.interface';
 
 const physicalCharacteristics = (
   object: Star | Planet | Moon | NotableObject,
@@ -23,27 +23,29 @@ const physicalCharacteristics = (
             ? {
                 name: 'Mean Diameter',
                 hint: [Hint.meanDiameter],
-                value: { value: (object as NotableObject).diameter, unit: Units.km},
+                value: { value: (object as NotableObject).diameter, unit: Units.km },
                 altValues: Convert.kilometersToAltUnits((object as NotableObject).diameter)
               }
             : {
                 name: 'Radius',
-                hint: [Hint.radius], 
+                hint: [Hint.radius],
                 value: { value: (object as Star | Planet | Moon).radius, unit: Units.km },
                 altValues: Convert.kilometersToAltUnits((object as Star | Planet | Moon).radius)
               },
           {
             name: 'Mass',
-            hint: [Hint.mass], 
-            value: { 
-              value: object.mass, 
-              unit: type === CelestialEntityType.notable || type === CelestialEntityType.moon
-               ? Units.kg 
-               : Units.earths
-            }, 
-            altValues: type === CelestialEntityType.notable || type === CelestialEntityType.moon
-              ? Convert.kilogramsToAltUnits(object.mass)
-              : Convert.earthsToAltUnits(object.mass)
+            hint: [Hint.mass],
+            value: {
+              value: object.mass,
+              unit:
+                type === CelestialEntityType.notable || type === CelestialEntityType.moon
+                  ? Units.kg
+                  : Units.earths
+            },
+            altValues:
+              type === CelestialEntityType.notable || type === CelestialEntityType.moon
+                ? Convert.kilogramsToAltUnits(object.mass)
+                : Convert.earthsToAltUnits(object.mass)
           },
           {
             name: 'Density',
@@ -61,19 +63,21 @@ const physicalCharacteristics = (
             hint: [Hint.escapeVelocity],
             value: {
               value: object.escapeVelocity,
-              unit: type === CelestialEntityType.star || type === CelestialEntityType.planet 
-                ? Units.kmps
-                : Units.mps
+              unit:
+                type === CelestialEntityType.star || type === CelestialEntityType.planet
+                  ? Units.kmps
+                  : Units.mps
             },
-            altValues: type === CelestialEntityType.star || type === CelestialEntityType.planet 
-              ? Convert.kilometersPerSecondToAltUnits(object.escapeVelocity)
-              : Convert.metersPerSecondToAltUnits(object.escapeVelocity)
+            altValues:
+              type === CelestialEntityType.star || type === CelestialEntityType.planet
+                ? Convert.kilometersPerSecondToAltUnits(object.escapeVelocity)
+                : Convert.metersPerSecondToAltUnits(object.escapeVelocity)
           }
         ]
       }
     ]
   };
-}
+};
 
 const orbitalCharacteristics = (
   object: Planet | Moon | NotableObject,
@@ -92,35 +96,40 @@ const orbitalCharacteristics = (
               value: object.orbit.radius.avg,
               unit: type === CelestialEntityType.moon ? Units.km : Units.au
             },
-            altValues: type === CelestialEntityType.moon
-              ? Convert.kilometersToAltUnits(object.orbit.radius.avg)
-              : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.avg)
-          },          
+            altValues:
+              type === CelestialEntityType.moon
+                ? Convert.kilometersToAltUnits(object.orbit.radius.avg)
+                : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.avg)
+          },
           {
             name: type === CelestialEntityType.moon ? 'Periapsis' : 'Perihelion',
-            hint: type === CelestialEntityType.moon
-              ? [Hint.periapsis]
-              : [Hint.perihelion, Hint.astronomicalUnit],
-            value: { 
+            hint:
+              type === CelestialEntityType.moon
+                ? [Hint.periapsis]
+                : [Hint.perihelion, Hint.astronomicalUnit],
+            value: {
               value: object.orbit.radius.min,
               unit: type === CelestialEntityType.moon ? Units.km : Units.au
             },
-            altValues: type === CelestialEntityType.moon
-              ? Convert.kilometersToAltUnits(object.orbit.radius.min)
-              : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.min)
+            altValues:
+              type === CelestialEntityType.moon
+                ? Convert.kilometersToAltUnits(object.orbit.radius.min)
+                : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.min)
           },
           {
             name: type === CelestialEntityType.moon ? 'Apoapsis' : 'Aphelion',
-            hint: type === CelestialEntityType.moon
-              ? [Hint.apoapsis]
-              : [Hint.aphelion, Hint.astronomicalUnit],
-            value: { 
+            hint:
+              type === CelestialEntityType.moon
+                ? [Hint.apoapsis]
+                : [Hint.aphelion, Hint.astronomicalUnit],
+            value: {
               value: object.orbit.radius.max,
               unit: type === CelestialEntityType.moon ? Units.km : Units.au
             },
-            altValues: type === CelestialEntityType.moon
-              ? Convert.kilometersToAltUnits(object.orbit.radius.max)
-              : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.max)
+            altValues:
+              type === CelestialEntityType.moon
+                ? Convert.kilometersToAltUnits(object.orbit.radius.max)
+                : Convert.astronomicalUnitsToAltUnits(object.orbit.radius.max)
           }
         ]
       },
@@ -130,13 +139,14 @@ const orbitalCharacteristics = (
           {
             name: 'Period',
             hint: [Hint.orbitalPeriod],
-            value: { 
+            value: {
               value: object.orbit.period,
               unit: type === CelestialEntityType.moon ? Units.d : Units.y
             },
-            altValues: type === CelestialEntityType.moon 
-              ? Convert.daysToAltUnits(object.orbit.period)
-              : Convert.yearsToAltUnits(object.orbit.period)
+            altValues:
+              type === CelestialEntityType.moon
+                ? Convert.daysToAltUnits(object.orbit.period)
+                : Convert.yearsToAltUnits(object.orbit.period)
           },
           {
             name: 'Speed',
@@ -148,7 +158,7 @@ const orbitalCharacteristics = (
       }
     ]
   };
-}
+};
 
 const planetAxialRotation = (planet: Planet): CelestialObjectDataSection => {
   return {
@@ -178,7 +188,7 @@ const planetAxialRotation = (planet: Planet): CelestialObjectDataSection => {
       }
     ]
   };
-}
+};
 
 const starMotion = (star: Star): CelestialObjectDataSection => {
   return {
@@ -225,7 +235,7 @@ const starMotion = (star: Star): CelestialObjectDataSection => {
       }
     ]
   };
-}
+};
 
 export const objectData = (data: CelestialEntityData): CelestialObjectDataSection[] => {
   switch (data.type) {
@@ -253,4 +263,4 @@ export const objectData = (data: CelestialEntityData): CelestialObjectDataSectio
     default:
       return [];
   }
-}
+};

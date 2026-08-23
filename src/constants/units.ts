@@ -1,4 +1,4 @@
-import { DataUnit } from '../types/ui/data-unit.interface';
+import type { DataUnit } from '../types/ui/data-unit.interface';
 
 //=============================================================================
 //  Time

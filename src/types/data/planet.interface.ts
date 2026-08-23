@@ -1,6 +1,6 @@
-import { CelestialBody } from './celestial-body.interface';
-import { Moon } from './moon.interface';
-import { Orbit } from './orbit.interface';
+import type { CelestialBody } from './celestial-body.interface';
+import type { Moon } from './moon.interface';
+import type { Orbit } from './orbit.interface';
 
 export interface Planet extends CelestialBody {
   orbit: Orbit;
@@ -8,6 +8,6 @@ export interface Planet extends CelestialBody {
     sidereal: number;
     synodic: number;
     tilt: number;
-  },
+  };
   moons: Moon[];
 }

@@ -18,7 +18,6 @@ An overview of the Solar System with basic information about the Sun, planets, a
 
 This project is made with React.
 
-* To run the app in the development mode, run `npm start` in the project directory. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
+* To run the app in the development mode, run `npm run dev` in the project directory. Open [http://localhost:5173](http://localhost:5173) to view it in the browser. The page will reload if you make edits.
 
-* To build the app for production, run `npm run build` in the project directory. The app will be saved to the `build` folder.
-
+* To build the app for production, run `npm run build` in the project directory. The app will be saved to the `dist` folder.

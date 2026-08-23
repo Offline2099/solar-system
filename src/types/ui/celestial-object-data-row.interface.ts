@@ -1,5 +1,5 @@
-import { Definition } from './definition.interface';
-import { DataValue } from './data-value.interface';
+import type { Definition } from './definition.interface';
+import type { DataValue } from './data-value.interface';
 
 export interface CelestialObjectDataRow {
   name: string;

@@ -1,9 +1,7 @@
-export interface CelestialBody {
-  name: string;
-  description: string[];
+import type { CelestialObject } from './celestial-object.interface';
+
+export interface CelestialBody extends CelestialObject {
   radius: number;
-  mass: number;
-  density: number;
   surfaceGravity: number;
   escapeVelocity: number;
 }

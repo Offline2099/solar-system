@@ -1,4 +1,4 @@
-import { NotableObject } from './notable-object.interface';
+import type { NotableObject } from './notable-object.interface';
 
 export interface Region {
   name: string;

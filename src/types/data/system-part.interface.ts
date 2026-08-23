@@ -1,7 +1,7 @@
-import { SystemPartType } from '../../constants/data/system-part-type.enum';
-import { Planet } from './planet.interface';
-import { Region } from './region.interface';
-import { Star } from './star.interface';
+import { SystemPartType } from '../../constants/system-part-type';
+import type { Planet } from './planet.interface';
+import type { Region } from './region.interface';
+import type { Star } from './star.interface';
 
 export interface SystemPart {
   name: string;

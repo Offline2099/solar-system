@@ -1,22 +1,21 @@
-import './ImageContainer.scss';
 import { useState } from 'react';
-import { CelestialEntityType } from '../../constants/data/celestial-entity-type.enum';
-import { ENTITY_TYPE_NAME } from '../../constants/data/entity-type-name';
-import { entityImageURL, iconURL } from '../../services/url';
+import { CelestialEntityType } from '../../constants/celestial-entity-type';
+import { ENTITY_TYPE_NAME } from '../../constants/entity-type-name';
+import { entityImageURL, iconURL } from '../../utils/url';
+import './ImageContainer.scss';
 
 interface EntityImageData {
   type: CelestialEntityType;
   name: string;
 }
 
-const ImageContainer: React.FC<EntityImageData> = ({ type, name }) => {
-  const [isLoading, setLoading] = useState<boolean>(true);
-  const spinner: string = iconURL('spinner');
-  const entityImage: string = entityImageURL(type, name);
+const ImageContainer = ({ type, name }: EntityImageData) => {
+  const [isLoading, setLoading] = useState(true);
+  const entityImage = entityImageURL(type, name);
   return (
     <div className={`entity-image ${ENTITY_TYPE_NAME[type]}`}>
-      {isLoading && <img className='spinner' src={spinner} alt='' />}
-      <img 
+      {isLoading && <img className="spinner" src={iconURL('spinner')} alt="" />}
+      <img
         className={`image ${isLoading ? 'loading' : ''}`.trim()}
         src={entityImage}
         alt={name}
@@ -24,6 +23,6 @@ const ImageContainer: React.FC<EntityImageData> = ({ type, name }) => {
       />
     </div>
   );
-}
+};
 
 export default ImageContainer;

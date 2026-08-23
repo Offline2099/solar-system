@@ -1,16 +1,17 @@
 import * as Units from '../constants/units';
-import { Range } from '../types/general/range.interface';
-import { DataUnit } from '../types/ui/data-unit.interface';
-import { DataValue } from '../types/ui/data-value.interface';
+import type { Range } from '../types/general/range.interface';
+import type { DataUnit } from '../types/ui/data-unit.interface';
+import type { DataValue } from '../types/ui/data-value.interface';
 
 const convertValue = (value: number | Range, ratio: number, outputUnit: DataUnit): DataValue => {
   return {
-    value: typeof value !== 'number'
-      ? {
-          min: ratio * (value as Range).min,
-          max: ratio * (value as Range).max
-        }
-      : ratio * (value as number),
+    value:
+      typeof value !== 'number'
+        ? {
+            min: ratio * (value as Range).min,
+            max: ratio * (value as Range).max
+          }
+        : ratio * (value as number),
     unit: outputUnit
   };
 };
@@ -78,7 +79,6 @@ export const astronomicalUnitsToAltUnits = (distance: number | Range): DataValue
 const kilometersPerSecondToKilometersPerHour = (speed: number | Range): DataValue => {
   return convertValue(speed, 3600, Units.kmph);
 };
-
 
 const kilometersPerSecondToMilesPerSecond = (speed: number | Range): DataValue => {
   return convertValue(speed, 0.6215, Units.mips);

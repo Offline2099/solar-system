@@ -1,6 +1,6 @@
-import { HintType } from '../../constants/ui/hint-type.enum';
-import { Definition } from './definition.interface';
-import { DataValue } from './data-value.interface';
+import { HintType } from '../../constants/hint-type';
+import type { Definition } from './definition.interface';
+import type { DataValue } from './data-value.interface';
 
 export interface Hint {
   type: HintType;

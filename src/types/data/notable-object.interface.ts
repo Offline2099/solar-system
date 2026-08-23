@@ -1,10 +1,8 @@
-import { Range } from '../general/range.interface';
-import { CelestialBody } from './celestial-body.interface';
-import { Orbit } from './orbit.interface';
+import type { Range } from '../general/range.interface';
+import type { CelestialObject } from './celestial-object.interface';
+import type { Orbit } from './orbit.interface';
 
-type Difference = 'radius' | 'surfaceGravity' | 'escapeVelocity';
-
-export interface NotableObject extends Omit<CelestialBody, Difference> {
+export interface NotableObject extends CelestialObject {
   diameter: number;
   surfaceGravity: number | Range;
   escapeVelocity: number | Range;
